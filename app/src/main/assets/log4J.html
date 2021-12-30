@@ -1,0 +1,297 @@
+<p lang="ru-RU" align="center"><span style="color: #303030;"><span
+        style="font-family: 'Roboto Slab', 'Times New Roman';"><span
+        style="font-size: large;"><strong>Ответы на вопросы на собеседование Log4j. </strong></span></span></span>
+</p>
+<p lang="en-US" align="center">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Из чего состоит логгер?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Любой регистратор событий состоит из трех элементов:</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">cобственно регистрирующего - logger;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">направляющего вывод - appender;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">форматирующего вывод - layout.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какие есть уровни сообщении в log4j?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Приоритетов может быть ШЕСТЬ (log4j1.2.*):</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><a name="more"></a> <span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">FATAL - произошла фатальная ошибка - у этого сообщения наивысший приоритет</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">ERROR - в программе произошла ошибка</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">WARN - предупреждение в программе что-то не так</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">INFO - информация.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">DEBUG - детальная информация для отладки</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">TRACE&ndash; трассировка всех сообщений в указанный аппендер</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">OFF&lt; TRACE&lt; DEBUG&lt; INFO&lt; WARN&lt; ERROR&lt; FATAL&lt; ALL</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое Appender?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Вывод регистратора может быть направлен в различные места назначения: файл, консоль и т. д. Каждому из них соответствует класс, реализующий интерфейс org.apache.log4j.Appender. Кроме того, вывод в базу данных можно произвести с помощью класса JDBCAppender, в журнал событий ОС - NTEventLogAppender, на SMTP-сервер - SMTPAppender.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Если логгер - это та точка, откуда уходят сообщения в коде, то аппендер - это та точка, куда они приходят в конечном итоге. Например, файл или консоль.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Список таких точек, поддерживаемых Log4J:</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">консоль;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">файлы (несколько различных типов);</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span
+                lang="ru-RU">JDBC;</span></span></span></span></span></span></span></p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">темы (topics) JMS;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">NT Event Log;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span
+                lang="ru-RU">SMTP;</span></span></span></span></span></span></span></p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span
+                lang="ru-RU">Сокет;</span></span></span></span></span></span></span></p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Syslog;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Telnet;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">любой java.io.Writer или java.io.OutputStream.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какие основные аппендеры Log4j?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Основными аппендерами, использующимися наиболее широко, являются файловые аппендеры. Их есть несколько типов:</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">org.apache.log4j.FileAppender</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">org.apache.log4j.RollingFileAppender</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">org.apache.log4j.DailyRollingFileAppender</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое Layout?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Вывод регистратора может иметь различный формат. Каждый формат представлен классом, производным от Layout. Все методы класса Layout предназначены только для создания подклассов.</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">org.apache.log4j.SimpleLayout - наиболее простой вариант. На выходе читается уровень вывода и сообщение.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">org.apache.log4j.HTMLLayout - данный компоновщик форматирует сообщения в виде HTML-страницы.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">org.apache.log4j.xml.XMLLayout - формирует сообщения в виде XML.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">org.apache.log4j.PatternLayout и org.apache.log4j.EnhancedPatternLayout используют шаблонную строку для форматирования выводимого сообщения.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU">&nbsp;</p>

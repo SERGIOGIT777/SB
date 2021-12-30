@@ -1,0 +1,841 @@
+<p lang="ru-RU" align="center"><span style="color: #303030;"><span
+        style="font-family: 'Roboto Slab', 'Times New Roman';"><span
+        style="font-size: large;"><strong>Ответы на вопросы на собеседование Multithreading </strong></span></span></span>
+</p>
+<p lang="en-US" align="center">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Чем отличается процесс от &nbsp;потока?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Процесс это некоторая единица операционной системы, которой выделена память и другие ресурсы. Поток это единица исполнения кода. Поток имеет стэк - некоторую свою память для исполнения. Остальная память процесса - общая для всех его потоков. Потоки исполняются на ядрах процессора.&nbsp;В некоторых OS разница между процессами и потоками сведена к минимуму.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Каким образом можно создать поток?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Есть несколько способов создания и запуска потоков:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">С помощью класса, реализующего Runnable:</span></span></span></span></span></span></span>
+        </p>
+        <ul>
+            <li>
+                <p align="justify"><span style="color: #333333;"><span
+                        style="font-family: Lato, 'Times New Roman';"><span
+                        style="font-size: small;"><span
+                        style="font-family: Halant, 'Times New Roman';"><span
+                        style="font-size: large;"><span style="font-size: medium;"><span
+                        lang="ru-RU">Создать объект класса Thread.</span></span></span></span></span></span></span>
+                </p>
+            </li>
+            <li>
+                <p align="justify"><span style="color: #333333;"><span
+                        style="font-family: Lato, 'Times New Roman';"><span
+                        style="font-size: small;"><span
+                        style="font-family: Halant, 'Times New Roman';"><span
+                        style="font-size: large;"><span style="font-size: medium;"><span
+                        lang="ru-RU">Создать объект класса, реализующего интерфейс Runnable.</span></span></span></span></span></span></span>
+                </p>
+            </li>
+            <li>
+                <p align="justify"><span style="color: #333333;"><span
+                        style="font-family: Lato, 'Times New Roman';"><span
+                        style="font-size: small;"><span
+                        style="font-family: Halant, 'Times New Roman';"><span
+                        style="font-size: large;"><span style="font-size: medium;"><span
+                        lang="ru-RU">Вызвать у созданного объекта Thread метод start() (после этого запустится метод run() у переданного объекта, реализующего Runnable).</span></span></span></span></span></span></span>
+                </p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">С помощью класса, расширяющего Thread:</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<ul>
+    <ul>
+        <li>
+            <p align="justify"><span style="color: #333333;"><span
+                    style="font-family: Lato, 'Times New Roman';"><span
+                    style="font-size: small;"><span style="font-family: Halant, 'Times New Roman';"><span
+                    style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Создать объект класса ClassName extends Thread.</span></span></span></span></span></span></span>
+            </p>
+        </li>
+        <li>
+            <p align="justify"><a name="more"></a> <span style="color: #333333;"><span
+                    style="font-family: Lato, 'Times New Roman';"><span
+                    style="font-size: small;"><span style="font-family: Halant, 'Times New Roman';"><span
+                    style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Переопределить run() в этом классе (смотрите примере ниже, где передается имя потока 'Second').</span></span></span></span></span></span></span>
+            </p>
+        </li>
+    </ul>
+</ul>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">С помощью класса, реализующего java.util.concurrent.Callable:</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<ul>
+    <ul>
+        <li>
+            <p align="justify"><span style="color: #333333;"><span
+                    style="font-family: Lato, 'Times New Roman';"><span
+                    style="font-size: small;"><span style="font-family: Halant, 'Times New Roman';"><span
+                    style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Создать объект класса, реализующего интерфейс Callable.</span></span></span></span></span></span></span>
+            </p>
+        </li>
+        <li>
+            <p align="justify"><span style="color: #333333;"><span
+                    style="font-family: Lato, 'Times New Roman';"><span
+                    style="font-size: small;"><span style="font-family: Halant, 'Times New Roman';"><span
+                    style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Создать объект ExecutorService с указанием пула потоков.</span></span></span></span></span></span></span>
+            </p>
+        </li>
+        <li>
+            <p align="justify"><span style="color: #333333;"><span
+                    style="font-family: Lato, 'Times New Roman';"><span
+                    style="font-size: small;"><span style="font-family: Halant, 'Times New Roman';"><span
+                    style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Создать объект Future. Запуск происходит через метод submit(); Сигнатура: &lt;T&gt; Future&lt;T&gt; submit(Callable&lt;T&gt; task).</span></span></span></span></span></span></span>
+            </p>
+        </li>
+    </ul>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое монитор?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Контроль за доступом к объекту-ресурсу обеспечивает понятие монитора. Монитор экземпляра может иметь только одного владельца. При попытке конкурирующего доступа к объекту, чей монитор имеет владельца, желающий заблокировать объект-ресурс поток должен подождать освобождения монитора этого объекта и только после этого завладеть им и начать использование объекта-ресурса.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какие способы синхронизации в Java?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ниже приведены некоторые способы синхронизации в Java:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Системная синхронизация с использованием wait/notify.&nbsp;Поток, который ждет выполнения каких-либо условий, вызывает у этого объекта метод wait, предварительно захватив его монитор. На этом его работа приостанавливается. Другой поток может вызвать на этом же самом объекте метод notify (опять же, предварительно захватив монитор объекта), в результате чего, ждущий на объекте поток "просыпается" и продолжает свое выполнение.&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Системная синхронизация с использованием join.&nbsp;Метод join, вызванный у экземпляра класса Thread, позволяет текущему потоку остановиться до того момента, как поток, связаный с этим экземпляром, закончит работу.&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Использование классов из пакета java.util.concurrent,&nbsp;который предоставляет набор классов для организации межпоточного взаимодействия. Примеры таких классов - Lock, семафор (Semaphore), etc. Концепция данного подхода заключается в использовании атомарных операций и переменных.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU"><br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как работают методы wait и notify/notifyAll?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Эти метеоды предназначены для межпоточной синхронизации, для взаимодействия потоков между собой. Как работают эти методы. Во-первых они могут вызваны только потоком, который захватил монитор объекта, для которого эти методы вызываются. То есть они вызываются внутри блока synchronized и для объекта, монитор которого этим synchronized захвачен. Если внутри synchronized метода - то для класса, к которому относятся эти методы. Что делает метод wait(). Метод wait() отдает (освобождает) монитор объекта, так что другие потоки теперь могут его (монитор) захватить, то есть войти в блок synchronized для этого объекта. Затем метод wait() переходит в состояние ожидания, до тех пор пока другой поток не вызывет метод notify() или notifyAll() для этого же объекта. После чего поток, в котором был вызван wait(), пытается снова захватить монитор объекта и когда монитор становится свободным, то есть когда другой поток освобождает его, захватывает монитор и продолжает выполнение со следующего после wait() оператора. Причем у потока вызвашего wait() нет никакого преимущества перед другими потоками, ожидающими захвата того же монитора. Что делают методы notify(), notifyAll(). Они "пробуждают" поток, ожидающий методом wait() (если такой есть), и переводят его в состояние ожидания освобождения монитора. Разница между notify() и notifyAll() в том, что notify() пробуждает только один поток , ожидающий методом wait(), какой именно будет пробужден - определить нельзя, а notifyAll() - все такие потоки.</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Чем отличается работа метода wait с параметром и без параметра?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Разница методов в следующем:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">final void wait() &nbsp;- метод используется в многопоточной среде, может вызываться только потоком, владеющим объектом синхронизации. При этом объект синхронизации освобождается, а текущий поток переходит в режим ожидания сигнала освобождения объекта синхронизации другим потоком путем вызова метода notify() либо notifyAll().</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">final void wait(long time) &nbsp;- аналогично wait() данный метод используется в многопоточной среде, переходит текущий поток в режим ожидания сигнала освобождения объекта синхронизации другим потоком путем вызова метода notify() либо notifyAll(), или ожидание происходит заданное время time, затем выполнение продолжается безусловно.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как работает метод Thread.yield()? Чем отличаются методы Thread.sleep() и Thread.yield()?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Основные отличия:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">метод&nbsp;yield() - пытается сказать планировщику потоков, что нужно выполнить другой поток, что ожидает в очереди на выполнение. Метод не пытается перевести текущий поток в состояние блокировки, сна или ожидания. Он просто пытается его перевести из состояние "работающий" в состояние "работоспособный". Однако выполнение метода может вообще не произвести никакого эффекта. состояние потока остатается RUNNABLE&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">метод sleep() - приостанавливает поток на указанное. состояние меняется на TIMED_WAITING, по истечению - RUNNABLE</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">метод&nbsp;wait() - меняет состояние потока на WAITING&nbsp;может быть вызвано только у объекта владеющего блокировкой, в противном случае выкинется исключение IllegalMonitorStateException. при срабатывании метода блокировка отпускается, что позволяет продолжить работу другим потокам ожидающим захватить ту же самую блокировку . в случае wait(int) с аргументом состояние будет TIMED_WAITING.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как работает метод Thread.join()?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Метод join() вызывается для того, чтобы привязать текущий поток в конец потока для которого вызывается метод. То есть второй поток будет в режиме блокировки пока первый поток не выполнится.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое dead lock?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Это когда один поток А получил блокировку на объект А1, а поток В получил блокировку на объект В1. В то время как поток А пытается получит блокировку на объект В1, а поток В на А1.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>На каком объекте происходит синхронизация при вызове static synchronized метода?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Представьте себе ситуацию что два потока одновременно изменяют состояние какого-то объекта, это недопустимо. Для этого необходимо синхронизировать потоки. Как это сделать? Ключевое слово synchronized позволяет это сделать установив в сигнатуре метода. Или же в методе можно описать блок synchronized, только в качестве параметра необходимо передать объект, который будет блокироватся.<br/> Представьте себе ситуацию когда один поток ждет пока разблокируется объект&hellip; а если это ждут несколько потоков? Нет гарантии что тот объект что больше всех ждал снятия блокировки будет выполнятся первым.&nbsp; Статические синхронизированные методы и нестатические &nbsp;синхронизированные методы не будет &nbsp;блокировать друг друга, никогда. Статические &nbsp;методы блокируются на экземпляре класса Class в то время как нестатические методы блокируются на текущем экземпляре (this). Эти действия не мешают друг другу. </span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">wait() - отказывается от блокировки остальные методы сохраняют блокировку.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего используется ключевое слово volatile, synchronized, transient, native?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Краткое описание ключевых слов:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">volatile - указывает на то, что поле синхронизировано для нескольких потоков</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">synchronized - указывает на то что метод синхронизированный или же в методе может находится такой блок синхронизации.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">transient - указывает на то, что переменная не подлежит сериализации</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">native - говорит о том, что реализация метода написана на другой программной платформе</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU"><br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что значит приоритет потока?&nbsp;</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Приоритет потока - это число от 1 до 10, в &nbsp;зависимости от которого, планировщик потоков выбирает какой поток &nbsp;запускать. Однако полагаться на приоритеты для предсказуемого выполнения многопоточной &nbsp;программы нельзя!</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое потоки - демоны в </strong></span></span></span></span></span><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>JAVA</strong></span></span></span></span></span><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>?&nbsp;</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Это потоки, которое работают в фоновом &nbsp;режиме и не гарантируют что они завершатся. Тоеть если все потоки завершились, то поток демон просто обрывается вместе с закрытием приложения.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что значит усыпить поток?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Перевести поток в спящее состояние можно &nbsp;с помощью метода sleep(long ms) ms - время в миллисекундах.&nbsp;При вызове этого метода, поток переходит &nbsp;в спящее состояние, после сна, поток переходит в пул потоков и &nbsp;находится в состоянии "работоспособный", т.е. не гарантируется что после пробуждения он будет сразу выполняться. Также поток не может усыпить другой поток, так как метод sleep - это статический метод! Вы просто усыпите текущий поток и не более того! Также метод sleep() может возбуждать InterruptedException().</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В каких состояниях может быть &nbsp;поток в </strong></span></span></span></span></span><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>JAVA</strong></span></span></span></span></span><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>? Как вообще работает поток?&nbsp;</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">У нас есть текущий поток, в котором &nbsp;выполняется метод main. Этот поток имеет свой стек и этот стек начинается с вызова метода main. Далее в методе main мы создаем новый поток, что происходит&hellip; создается новый поток и для него выделяется свой стек с первоначальным методом run(). Когда мы запускаем несколько потоков, то мы не можем гарантировать определенный порядок их вызовов. Планированием &nbsp;потоков занимается планировщик &nbsp;потоков JVM, выбирая из пулов потоков &nbsp;поток. Мы даже не можем гарантировать &nbsp;что если первый поток начался &nbsp;выполнятся первым, то он и закончит выполнятся первым, он может закончить выполнятся последним. Еще такой ньюанс, что поток, который закончил свое выполнение, не может быть повторно запущен! Он находится в состоянии "мертвый", а для запуска потока нового потока, объект должен находится в состоянии "новый". Потоки &nbsp;имеют такие состояния:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">новый(это когда только создали экземпляр класса Thread)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">живой &nbsp;или работоспособный(переходит в это состояние после запуска метода start(), но это не означает что поток уже работает! Или же он может перейти в это состояние из состояние работающий или блокированный)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">работающий(это когда метод run() начал выполнятся)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">ожидающий (waiting)/Заблокированный (blocked)/Спящий(sleeping). Эти состояния характеризуют поток как не готовый к работе. Я объединил эти состояния т.к. все они имеют общую черту &ndash; поток еще жив (alive), но в настоящее время не может быть выполнен. Другими словами поток уже не работает, но он может вернутся в рабочее состояние.&nbsp;Поток может быть заблокирован, это может &nbsp;означать что он ждет освобождение каких-то ресурсов. Поток может спать, если встретился метод sleep(long s) , или же он может ожидать, если встретился метод wait(), он будет ждать пока не вызовится метод notify() или notifyall().</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">мертвый(состояние когда метод run() завершил свою работу)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Чем отличаются два интерфейса для реализации задач Runnable и Callable?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Основные различия:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Интерфейс Runnable появиля в Java 1.0, а интерфейс Callable был введен в Java 5.0 в составе библиотеки java.util.concurrent.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Классы, реализующие &nbsp;интерфейс Runnable должны реализовывать метод run() для выполнения задачи. Классы, реализующие интерфейс Callable должны реализовывать метод call() для выполнения задачи.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Метод Runnable.run() не возвращает никакого значения, его тип void, а метод Callable.call() может возвращать значение типа T. Интерфейс Callable является параметризированным &nbsp;Callable&lt;T&gt; и тип значения, которое будет возвращаться в методе call() задается этим параметром T.&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Метод run() не может бросить проверяемое исключение, в то время как метод call() может бросить проверяемое исключение.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU"><br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Различия между CyclicBarrier и CountDownLatch?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Хоть оба эти синхронизаторы позволяют нитям дожидаться друг друга, главное различие между ними в том, что вы не можете заново использовать CountDownLatch после того, как его счётчик достигнет нуля, но вы можете использовать CyclicBarrier снова, даже после того, как барьер сломается.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое состояние гонки (race condition)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Состояние гонки - причина трудноуловимых багов. Как сказано в самом названии, состояние гонки возникает из-за гонки между несколькими нитями, если нить, которая должна исполнятся первой, проиграла гонку и исполняется вторая, поведение кода изменяется, из-за чего возникают недетерменированные баги. Это одни из сложнейших к отлавливанию и воспроизведению багов, из-за беспорядочной природы гонок между нитями. Пример состояния гонки - беспорядочное исполнение.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как остановить нить?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Java предоставляет богатые API для всего, но, по иронии судьбы, не предоставляет удобных способов остановки нити. В JDK 1.0 было несколько управляющих методов, например stop(), suspend() и resume(), которые были помечены как deprecated в будущих релизах из-за потенциальных угроз взаимной блокировки, с тех пор разработчики Java API не предприняли попыток представить стойкий, ните-безопасный и элегантный способ остановки нитей. Программисты в основном полагаются на факт того, что нить останавливается сама, как только заканчивает выполнять методы run() или call(). Для остановки вручную, программисты пользуются преимуществом volatile boolean переменной и проверяют её значение в каждой итерации, если в методе run() есть циклы, или прерывают нити методом interrupt() для внезапной отмены заданий.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что происходит, когда в нити появляется исключение?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Это один из хороших вопросов с подвохом. Простыми словами, если исключение не поймано - нить мерта, если установлен обработчик непойманных исключений, он получит колбек. Thread.UncaughtExceptionHandler &ndash; интерфейс, определённый как вложенный интерфейс для обработчиков, вызываемых, когда нить внезапно останавливается из-за непойманного исключения. Когда нить собирается остановится из-за непойманного исключения, JVM проверит её на наличие UncaughtExceptionHandler, используя Thread.getUncaughtExceptionHandler(), и вызовет у обработчика метод uncaughtException(), передав нить и исключение в виде аргументов.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое ThreadLocal переменная?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">ThreadLocal переменные - специальный вид переменных, доступных Java программисту. Так же, как для состояний есть переменная состояния, для нитей есть ThreadLocal переменные. Это неплохой способ достичь ните-безопасности для затратных-для-создания объектов, например вы можете сделать SimpleDateFormat ните-безопасным, используя ThreadLocal. Так как это затратный класс, его нежелательно использовать в локальной области, которая требует отдельных экземпляров на каждый вызов. Предоставляя каждой нити её собственную копию, вы убиваете двух зайцев. Во-первых, вы уменьшаете количество экземпляров затратных объектов, используя по новой фиксированное количество экземпляров, и во-вторых, вы достигаете ните-безопасности, без потерь синхронизации и неизменяемости. Ещё один хороший пример локальной переменной у нити - класс ThreadLocalRandom, который уменьшает количество экземпляров затратных-для-создания объектов Random в много-нитиевой среде.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое FutureTask?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">FutureTask представляет собой отменяемое асинхронное вычисление в параллельном Java приложении. Этот класс предоставляет базовую реализацию Future, с методами для запуска и остановки вычисления, методами для запроса состояния вычисления и извлечения результатов. Результат может быть получен только когда вычисление завершено, метод получения будет заблокирован, если вычисление ещё не завершено. Объекты FutureTask могут быть использованы для обёртки объектов Callable и Runnable. Так как FutureTask реализует Runnable, его можно передать Executor&rsquo;у на выполнение.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Различие между interrupted и isInterrupted?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Основное различие между interrupted() и isInterrupted() в том, что первый сбрасывает статус прерывания, а второй нет. Механизм прерывания в Java реализован с использованием внутреннего флага, известного как статус прерывания. Прерывание нити вызовом Thread.interrupt() устанавливает этот флаг. Когда прерванная нить проверяет статус прерывания, вызывая статический метод Thread.interrupted(), статус прерывания сбрасывается. Нестатический метод isInterrupted(), который используется нитью для проверки статуса прерывания у другой нити, не изменяет флаг прерывания. Условно, любой метод, который завершается, выкинув InterruptedException сбрасывает при этом флаг прерывания. Однако, всегда существует возможность того, что флаг тут же снова установится, если другая нить вызовет interrupt().</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Почему методы wait и notify вызываются в синхронизированном блоке?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Основная причина вызова wait и notify из синхронизированого блока или метода в том, что Java API обязательно требует этого. Если вы вызовете их не из синхронизированного блока, ваш код выбросит IllegalMonitorStateException. Более хитрая причина в том, чтобы избежать состояния гонки между вызовами wait и notify.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое пул нитей?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Создание нити затратно в плане времени и ресурсов. Если вы создаёте нить во время обработки запроса, это замедлит время отклика, также процесс может создать только ограниченное число нитей. Чтобы избежать этих проблем, во время запуска приложения создаётся пул нитей и нити повторно используются для обработки запросов. Этот пул нитей называется "thread pool", а нити в нём &ndash; рабочая нить. Начиная с Java 1.5 Java API предоставляет фреймворк Executor, который позволяет вам создавать различные пулы нитей, например single thread pool, который обрабатывает только одно задание за единицу времени, fixed thread pool, пул с фиксированным количеством нитей, и cached thread pool, расширяемый пул, подходящий для приложений с множеством недолгих заданий.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Различия между livelock и deadlock?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Livelock схож с deadlock, только в livelock состояния нитей или вовлечённых процессов постоянно изменяются в зависимости друг от друга. Livelock - особый случай нехватки ресурсов. Реальный пример livelock'а - когда два человека встречаются в узком коридоре и каждый, пытаясь быть вежливым, отходит в сторону, и так они бесконечно двигаются из стороны в сторону.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как проверить, удерживает ли нить lock?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Я и не подозревал, что можно проверять, удерживает ли нить lock в данный момент, до тех пор, пока не столкнулся с этим вопросом в одном телефонном интервью. В java.lang.Thread есть метод holdsLock(), он возвращает true, тогда и только тогда, когда текущая нить удерживает монитор у определённого объекта.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Как получить дамп нити?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Дамп нити позволяет узнать, чем нить занимается в данный момент. Существует несколько способов получения дампа нити, зависящих от операционной системы. В Windows вы можете использовать комбинацию ctrl + Break, в Linux - команду kill -3. Также вы можете воспользоваться утилитой jstack, она оперирует над id процесса, который вы можете узнать с помощью другой утилиты jps.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какой JVM параметр используется для контроля размера стека нити?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Это один из простых, -Xss параметер используется для контроля размера стека нити в Java.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Различия между synchronized и ReentrantLock?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Были времена, когда единственный способ достижения взаимного исключения был через ключевое слово synchronized, но он имеет несколько недостатков, например нельзя расширить lock за пределами метода или блока кода и т.д. Java 5 решает эту проблему, предоставляя более утончённый контроль через интерфейс Lock. ReentrantLock &ndash; распространённая реализация Lock, которая предоставляет Lock с таким же базовым поведением и семантикой, как у неявного монитора, достигаемый использованием синхронизированных методов, но с расширенными возможностями.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое Semaphore?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Semaphore - это новый тип синхронизатора. Это семафор со счётчиком. Концептуально, семафор управляет набором разрешений. Каждый acquire() блокируется, если необходимо, до того, как разрешение доступно, затем получает его. Каждый release() добавляет разрешение, потенциально освобождая блокирующий получатель (acquirer). Однако при этом не используются фактические объекты разрешений; Semaphore просто хранит количество доступных и действует соответственно. Semaphore используется для защиты дорогих ресурсов, которые доступны в ограниченном количестве, например подключение к базе данных в пуле.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что будет, если очередь пула нитей уже заполнена, а вы подадите задачу?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Если очередь пула нитей заполнилась, то поданная задача будет "отклонена". Метод submit() у ThreadPoolExecutor'а выкидывает RejectedExecutionException, после чего вызывается RejectedExecutionHandler.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Различия между методами submit() и execute() у пула нитей?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Оба метода являются способами подачи задачи в пул нитей, но между ними есть небольшая разница. Execute(Runnable command) определён в интерфейсе Executor и выполняет поданную задачу в будущем, но, что более важно, ничего не возвращает. С другой стороны submit() &ndash; перегруженный метод, он может принимать задачи типов Runnable и Callable и может возвращать объект Future, который можно использовать для отмены выполнения и/или ожидания результата вычислений. Этот метод определён в интерфейсе ExecutorService, который наследуется от интерфейса Executor, и каждый класс пула нитей, например ThreadPoolExecutor или ScheduledThreadPoolExecutor, наследует эти методы.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое блокирующий метод?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Блокирующий метод - метод, который блокируется, до тех пор, пока не выполнится задание, например метод accept() у ServerSocket блокируется в ожидании подключения клиента. Здесь блокирование означает, что контроль не вернётся к вызывающему методу до тех пор, пока не выполнится задание. С другой стороны, существуют асинхронные или не блокирующиеся методы, которые завершаются до выполнения задачи.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое ReadWriteLock?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">В целом, ReadWriteLock - это результат техники разбора lock'а для улучшения производительности параллельных приложений. Это интерфейс, который был добавлен в Java 5. Он оперирует парой связанных lock&rsquo;ов, один для операций чтения, один для записи. Читающий lock может удерживаться одновременно несколькими читающими нитями, до тех пор пока не будет записывающих. Записывающий lock эксклюзивен. Если хотите, вы можете реализовать интерфейс с вашим набором правил, или вы можете использовать ReentrantReadWriteLock, который поддерживает максимум 65535 рекурсивных записывающих lock'ов и 65535 читающих lock'ов.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое double checked locking Синглтона?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Это старый способ создания ните-безопасного синглтона, который пытается оптимизировать производительность, блокируясь только когда экземпляр синглтона создаётся впервые.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое фреймворк Fork/Join?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Фреймворк Fork/Join, представленный в JDK 7, - это мощная утилита, позволяющая разработчику пользоваться преимуществами нескольких процессоров у современных серверов. Он разработан для работы, которую можно рекурсивно разбить на маленькие частицы. Цель - использовать всю доступную вычислительную мощь, для увеличения производительности вашего приложения. Одного значительное преимущество этого фреймворка в том, что он использует work-stealing алгоритм (от work - работа и steal - красть). Рабочие нити, у которых закончились свои задания, могут "своровать" задания у других нитей, которые всё ещё заняты.</span></span></span></span></span></span></span>
+</p>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_test"
+    app:startDestination="@id/testIndexFragment">
+
+    <fragment
+        android:id="@+id/testIndexFragment"
+        android:name="com.example.javasb.FragmentTest.TestIndexFragment"
+        android:label="fragment_test_index"
+        tools:layout="@layout/fragment_test_index" />
+</navigation>

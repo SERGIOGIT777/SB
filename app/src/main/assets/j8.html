@@ -1,0 +1,1668 @@
+<p lang="ru-RU" align="center"><span style="color: #303030;"><span
+        style="font-family: 'Roboto Slab', 'Times New Roman';"><span
+        style="font-size: large;"><strong>Ответы на вопросы на собеседование Java 8 </strong></span></span></span>
+</p>
+<p lang="en-US" align="center">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какие нововведения, появились в Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">В Java 8 было добавлено много функций, наиболее значимые из них упомянуты ниже:</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Полноценная поддержка лямбда-выражений, которая добавляет функциональные возможности обработки данных для Java.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ключевое слово default в интерфейсах для поддержки функциональности по умолчанию(интерфейс может иметь реализацию метода по умолчанию).</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ссылки на методы.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Функциональные интерфейсы (предикаты, поставщики и т. д.)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Потоки (stream) для работы с коллекциями</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Новое API для работы с датами</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Nashorn движок JavaScript, разрабатываемый полностью на Java компанией Oracle.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU"><a name="more"></a></p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как сортировать список строк с помощью лямбда-выражения?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код сортирует список строк с помощью лямбда-выражения Java 8:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_1.jpg" width="584"
+        height="75" name="Picture 1" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какова структура лямбда-выражения?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Лямбда выражение имеет следующую структуру:</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">(method params) -&gt; {lambda expression body}</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">где&nbsp;</span></span></span></span></span></span></span></p>
+<ul>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">method params - список входящих параметров, разделенных запятой(в случаи если параметров больше одного заключаются в скобки).&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">оператор "-&gt;" - служит разделителем между списком параметров нашего метода и телом, в котором происходит его реализация.&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">lambda expression body - тело метода, состоящее из одного выражения или нескольких, заключенных в фигурные скобки.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>К каким переменным есть доступ у Лямбда-выражений?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Лямбда-выражения имеют доступ к переменным области видимости, в которой их определили. Но доступ возможен только при условии, что переменные являются effective final, то есть либо явно имеют модификатор final, либо не меняют своего значения после инициализации, если переменной присваивается значение во второй раз, лямбда-выражение вызывает ошибку компиляции.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое ссылки на метод?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Ссылки на метод - компактные лямбда-выражения которые позволяют передавать ссылки на методы или конструкторы. Для этого нужно использовать ключевое слово "::".</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Ссылочные методы внедряют полезный синтаксис, чтобы ссылаться на существующие методы или конструкторы Java-классов или объектов (экземпляров). Совместно с лямбда-выражениями, ссылочные методы делают языковые конструкции компактными и лаконичными, делая его шаблонным.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какие виды ссылок на методы вы знаете?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Существует четыре вида ссылок на методы:</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ссылка на статический метод(ContainingClass::staticMethodName)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ссылка на метод конкретного объекта(ContainingObject::instanceMethodName)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ссылка на метод произвольного объекта конкретного типа(ContainingType::methodName)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ссылка на конструктор(ClassName::new), для дженериков (generics) Class&lt; T &gt;::new.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Объясните выражение System.out::println.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Выражение System.out::println является ссылкой на статический метод println об'єкта out класа System, который эквивалентен лямбда-выражению x -&gt; System.out.println(x).<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое функциональные интерфейсы?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Функциональный интерфейс - это тот интерфейс, который определяет строго один абстрактный метод.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">В Java 8 была введена новая аннотация @FunctionalInterface для обозначения интерфейса, функциональным, эта аннотация используется для того, чтобы избежать случайного добавления абстрактных методов в функциональный интерфейс. Она не обязательна, но является хорошей практикой написания кода.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Функциональные интерфейсы позволяют нам использовать лямбда-выражения для создания экземпляра таких интерфейсов.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Лучшим примером функционального интерфейса будет интерфейс java.lang.Runnable с одним абстрактным методом run(). Заметим, интерфейс может включать сколько угодно default методов и при этом оставаться функциональным, потому что default методы - не абстрактные.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс BiConsumer&lt;T,U&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию, которая принимает два входных параметра, и не возвращает никакого результата.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс BiFunction&lt;T,U,R&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает два аргумента и&nbsp;возвращает&nbsp;результат.<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс BinaryOperator&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию над двумя операндами одного и того же типа, выполняет над ними бинарную операцию и возвращает результат того же типа, что и операнды.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс BiPredicate&lt;T,U&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой предикат (булеву функцию) двух аргументов.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс BooleanSupplier?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой поставщика булевых результатов.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс Consumer&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию, которая принимает один входной аргумент, выполняет некоторое действие над объектом типа T, при этом ничего не возвращая.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс DoubleBinaryOperator?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию над двумя операндами типа double, возвращает результат типа double.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс DoubleConsumer?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию, которая принимает один аргумент типа double, и не возвращает результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс DoubleFunction&lt;R&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент типа double, и возвращает результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс DoublePredicate?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой предикат (булеву функцию) одного аргумента типа double.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс DoubleSupplier?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой поставщика double результатов.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс DoubleToIntFunction?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент типа double, возвращает результат типу int.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс DoubleToLongFunction?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент типа double, и возвращает результат типу long.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span style="font-size: medium;"><strong><span
+                style="color: #333333;"><span style="color: #434343;"><span
+                style="font-family: Arial, sans-serif;"><span lang="ru-RU">Для чего нужен функциональный интерфейс DoubleUnaryOperator?</span></span></span></span></strong></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию над одним аргументом типа double, возвращает результат типу double.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс Function&lt;T,R&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию перехода от объекта типа T к объекту типа R.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс IntBinaryOperator?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию над двумя операндами типа int, возвращает результат типа int.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс IntConsumer?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию, которая принимает один аргумент типа int, и не возвращает результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс IntFunction&lt;R&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию, которая принимает один аргумент типа int, возвращает результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс IntPredicate?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой предикат (булеву функцию) одного аргумента типа int.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс IntSupplier?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Представляет собой поставщика int результатов.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс IntToDoubleFunction?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент типа int, возвращает результат типу double.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс IntToLongFunction?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент типа int, возвращает результат типу long.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс IntUnaryOperator?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию над одним аргументом типа int, возвращает результат типу int.</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс LongBinaryOperator?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию над двумя операндами типа long, возвращает результат типа long.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс LongConsumer?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию, которая принимает один аргумент типа long, не возвращает результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс LongFunction&lt;R&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент типа long, и возвращает результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс LongPredicate?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой предикат (булеву функцию) одного аргумента типа long.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс LongSupplier?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой поставщика long результатов.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс LongToDoubleFunction?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент типа long, и возвращает результат типу double.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс LongToIntFunction?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент типа long, и возвращает результат типу int.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс LongUnaryOperator?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию над одним аргументом типа long, возвращает результат типу long.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс ObjDoubleConsumer&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию, которая принимает один аргумент типа object, и второй типа double, и не возвращает результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс ObjIntConsumer&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию, которая принимает один аргумент типа object, и второй типа int, и не возвращает результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс ObjLongConsumer&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию, которая принимает один аргумент типа object, и второй типа long, и не возвращает результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс Predicate&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой предикат (булеву функцию) одного аргумента.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс Supplier&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Представляет собой поставщика результатов.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс ToDoubleBiFunction&lt;T,U&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает два аргумента, возвращает результат типу double.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс ToDoubleFunction&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент, возвращает результат типа double.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс ToIntBiFunction&lt;T,U&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает два аргумента, возвращает результат типу int.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс ToIntFunction&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент, возвращает результат типа int.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс ToLongBiFunction&lt;T,U&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает два аргумента, возвращает результат типу long.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс ToLongFunction&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой функцию, которая принимает один аргумент, возвращает результат типа long.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен функциональный интерфейс UnaryOperator&lt;T&gt;?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Представляет собой операцию над одним операндом, возвращает результат того же типа, что и операнд.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<p lang="en-US" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое StringJoiner?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">StringJoiner используется, чтобы создать последовательность символов, разделенных разделителем, может (но это не обязательно) начинаться с префикса и заканчиваться суффиксом. Пример:</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_2.jpg" width="585"
+        height="59" name="Picture 2" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое default методы?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Начиная с Java 8 мы можем использовать в интерфейсах стандартные методы (default methods) и статические методы (static methods).&nbsp;</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Default метод - это метод в интерфейсе с по умолчанию реализованной логикой, который не требуется обязательно<br/> определять в реализации этого интерфейса.</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_3.jpg" width="592"
+        height="168" name="Picture 3" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое static методы?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Static-методы в интерфейсе - это по существу то же самое, что static-методы в абстрактном классе.</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Статические методы в интерфейсе являются частью интерфейса, мы не можем использовать его для объектов класса реализации.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Статические методы в интерфейсе хороши для обеспечения вспомогательных методов, например, проверки на null, сортировки коллекций и т.д.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Статические методы в интерфейсе помогают обеспечивать безопасность, не позволяя классам, которые реализуют интерфейс, переопределить их.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Мы не можем определить статические методы для методов класса Object, потому что получим ошибку компиляции.&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как вызывать default-метод интерфейса в классе?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Используя ключевое слово super вместе с именем интерфейса.</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_4.jpg" width="581"
+        height="186" name="Picture 4" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как вызывать static-метод интерфейса в классе?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Используя имя интерфейса.</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_5.jpg" width="585"
+        height="185" name="Picture 5" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое потоки(stream) в Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">java.util.stream - введен для поддержки распараллеливания вычислений в потоках. Предоставляет возможность обрабатывать последовательность элементов исполняя одну или несколько операций, которые могут выполняться либо последовательно либо паралельно. Потоки делятся на последовательные и параллельные. Самая большая польза от этого - в работе с коллекциями.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Операции над потоком относятся либо к промежуточным, либо к терминальным. Все промежуточные операции возвращают поток, так что мы можем объединять несколько промежуточных операций без использования точки с запятой. Терминальные операции возвращают void или непотоковый результат.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужен метод collect Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Большинство операций класса Stream, которые модифицируют набор данных, возвращают этот набор в виде потока. Однако бывают ситуации, когда хотелось бы получить данные не в виде потока, а в виде обычной коллекции, например, ArrayList или HashSet. И для этого у класса Stream определен метод collect. Метод принимает в качестве параметра функцию преобразования к коллекции:</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">&lt;R,A&gt; R collect(Collector&lt;? super T,A,R&gt; collector)</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Параметр R представляет тип результата метода, параметр Т - тип элемента в потоке, а параметр А - тип промежуточных накапливаемых данных. В итоге параметр collector представляет функцию преобразования потока в коллекцию.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем разница между коллекцией(Collection) и потоком(Stream)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Разница между коллекцией(Collection) данных и потоком(Stream) из новой JDK8 в том что коллекции позволяют работать с элементами по-отдельности, тогда как поток(Stream) не позволяет. Например, с использованием коллекций, вы можете добавлять элементы, удалять, и вставлять в середину. Поток(Stream) не позволяет манипулировать отдельными элементами из набора данных, но вместо этого позволяет выполнять функции над данными как одним целом.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего предназначен метод forEach в потоках(stream)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Метод void forEach(Consumer&lt;? super T&gt; action) - для каждого элемента выполняется действие action. forEach является терминальной операцией, используется для перебора каждого элемента потока.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">forEach не гарантирует последовательности вывода элементов в параллельном stream-е, для этого используется метод forEachOrdered - он это гарантирует.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как вывести на экран 10 случайных чисел, используя forEach?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Следующий фрагмент кода показывает, как вывести 10 случайных чисел с помощью forEach.</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_6.jpg" width="585"
+        height="43" name="Picture 6" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего предназначен метод map в потоках(stream)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Метод &lt;R&gt; Stream&lt;R&gt; map(Function&lt;? super T,? extends R&gt; mapper) - преобразует элементы типа T в элементы типа R и возвращает поток с элементами R. map является промежуточной операцией, метод используется для преобразования элементов в другой объект при помощи переданной функции.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как можно вывести на экран уникальные квадраты чисел используя метод map?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий фрагмент кода демонстрирует это, используя метод map.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_7.jpg" width="640"
+        height="40" name="Picture 7" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какова цель метода filter в потоках(stream)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Метод Stream&lt;T&gt; filter(Predicate&lt;? super T&gt; predicate) - фильтрует элементы в соответствии с условием в предикате. filter является промежуточной операцией, используется для фильтрации массива через функцию. На самом деле filter, не выполняет фильтрацию, вместо этого он создается новый поток, который по завершению формирования, содержит элементы исходного потока, которые соответствуют заданному предикату.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как вывести на экран количество пустых строк с помощью метода filter?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий фрагмент кода демонстрирует это с помощью метода filter.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_8.jpg" width="640"
+        height="52" name="Picture 8" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего предназначен метод limit в потоках(stream)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Метод Stream&lt;T&gt; limit(long maxSize) - оставляет в потоке только maxSize элементов. limit является промежуточной операцией, используется для выборки первых maxSize элементов потока. Этот метод также возвращает модифицированный поток, в котором не более maxSize элементов.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего предназначен метод sorted в потоках(stream)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Метод Stream&lt;T&gt; sorted()/Stream&lt;T&gt; sorted(Comparator&lt;? super T&gt; comparator) - возвращает отсортированный поток. sorted является промежуточной операцией, метод используется для сортировки потока используя естественный порядок сравнения его элементов. Существует также второй метод sorted(), принимающий либо экземпляр Comparable, либо соответствующее ему лямбда-выражение.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как вывести на экран 10 случайных чисел в отсортированном порядке в Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий фрагмент кода демонстрирует это:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_9.jpg" width="590"
+        height="42" name="Picture 9" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Параллельная обработка в Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Чтобы сделать обычный последовательный поток параллельным, надо вызвать у объекта Stream метод parallel. Кроме того, можно также использовать метод parallelStream() интерфейса Collection для создания параллельного потока из коллекции.<br/> В то же время если рабочая машина не является многоядерной, то поток будет выполняться как последовательный.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий фрагмент кода, выводит количество пустых строк с помощью метода parallelStream.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_10.jpg" width="697"
+        height="53" name="Picture 10" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как найти максимальное число в списке Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код выводит наибольшее число которое присутствует в списке.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_11.jpg" width="698"
+        height="54" name="Picture 11" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как найти минимальное число в списке Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код выводит минимальное число которое присутствует в списке.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_12.jpg" width="669"
+        height="52" name="Picture 12" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как получить сумму всех чисел в списке, используя Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код выведет сумму всех чисел.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_13.jpg" width="673"
+        height="54" name="Picture 13" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как получить среднее значение всех чисел, в списке, используя Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код выведет среднее значение всех чисел.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_14.jpg" width="661"
+        height="54" name="Picture 14" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое Optional?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Optional - это контейнер объекта, он может содержать значение или некоторый тип Т, или просто быть null. Он предоставляет много полезных методов избавляющие от добавления повторяющихся if null/notNull проверок, что позволяет нам сфокусироваться на том, что мы хотим сделать. Метод isPresent() возвращает true если экземпляр Optional содержит не null значение и false в противном случае. Метод orElseGet() содержит запасной механизм результата, если Optional содержит null, принимая функции для генерации значения по умолчанию. Метод map() преобразует текущее значение Optional и возвращает новый экземпляр Optional. Метод orElse() похож на orElseGet(), но вместо функции он принимает значение по умолчанию.<br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое Nashorn?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Nashorn - это движок JavaScript, разрабатываемый полностью на Java компанией Oracle. &nbsp;Он призван дать возможность встраивать код JavaScript в приложения Java. В сравнении с Rhino, который поддерживается Mozilla &nbsp;Foundation, Nashorn обеспечивает от 2 до 10 раз более высокую производительность, так как он непосредственно компилирует код в памяти и передает байт-код виртуальной машине Java. Nashorn умеет компилировать код JavaScript и генерировать классы Java, которые загружаются специальным загрузчиком. Возможен вызов кода Java прямо из JavaScript.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое jjs в Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Nashorn поставляется с cmd-утилитой jjs, которая позволяет исполнять JavaScript прямо в консоли. jjs принимает список JavaScript файлов исходного кода и запускает их. Чтобы запустить файл давайте передадим его как аргумент в jjs:jjs fileName.js</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое LocalDateTime в Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">LocalDateTime объединяет вместе LocaleDate и LocalTime и содержит дату и время, но без часового пояса в календарной системе ISO-8601. Время хранится с точностью до наносекунды, так что в LocalTime можно хранить, например, величину "13:45.30.123456789". Есть множество удобных методов, таких как plusMinutes, plusHours, isAfter, toSecondOfDay и т.д.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое ZonedDateTime в Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">ZonedDateTime - аналог java.util.Calendar. Это самый мощный класс с полной информацией о временном контексте, включает временную зону. Он содержит дату и время в календарной системе ISO-8601.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как получить текущую дату с использованием time API из Java 8?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код выводит текущую дату.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_15.jpg" width="580"
+        height="59" name="Picture 15" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как добавить 1 неделю к текущей дате с использованием time API?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код добавляет 1 неделю к текущей дате.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_16.jpg" width="582"
+        height="74" name="Picture 16" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как добавить 1 месяц к текущей дате с использованием time API?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код добавляет 1 месяц к текущей дате.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_17.jpg" width="580"
+        height="78" name="Picture 17" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как добавить 1 год к текущей дате с использованием time API?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код добавляет 1 год к текущей дате.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_18.jpg" width="580"
+        height="78" name="Picture 18" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как добавить 10 лет к текущей дате с использованием time API?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код добавляет 10 лет к текущей дате.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_19.jpg" width="581"
+        height="78" name="Picture 19" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как получить следующий вторник используя time API?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код возвращает следующий вторник.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_20.jpg" width="661"
+        height="74" name="Picture 20" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как получить вторую субботу текущего месяца используя time API?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код демонстрирует это.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_21.jpg" width="663"
+        height="94" name="Picture 21" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как получить текущею дату в миллисекундах используя time API?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код возвращает дату в миллисекундах.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_22.jpg" width="584"
+        height="79" name="Picture 22" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>кАК получить текущею дату по местному времени в миллисекундах используя используя time API?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Следующий код демонстрирует это.</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/j8/j8_23.jpg" width="676"
+        height="95" name="Picture 23" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какой класс появился в Java 8 для декодирования данных?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">В Java 8 для этого появился класс public static class Base64.Decoder - этот класс реализует декодер для декодирования байт данных, используя схему кодирования Base64 как указано в RFC 4648 и RFC 2045, класс безопасен для использования несколькими параллельными потоками.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какой класс появился в Java 8 для кодирования данных?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">В Java 8 для этого появился класс public static class Base64.Encoder - этот класс реализует &nbsp;кодер для кодирования байт данных, используя схему кодирования Base64 как указано в RFC 4648 и RFC 2045, класс безопасен для использования несколькими параллельными потоками.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как создать Base64 декодировщик?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Используя метод getDecoder() класса Base64 он возвращает декодировщик Base64.Decoder, который декодирует данные с помощью схемы кодирования base64.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Как создать Base64 кодировщик?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Используя метод getEncoder() класса Base64 он возвращает кодировщик Base64.Encoder, который кодирует данные с помощью схемы кодирования base64.</span></span></span></span>
+</p>

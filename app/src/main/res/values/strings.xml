@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">JavaSB</string>
+    <string name="test">Тесты</string>
+    <string name="about">О программе</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Вопросы к собеседованию</string>
+    <string name="second_fragment_label">ООП</string>
+    <string name="oop_fragment_label">ООП theme</string>
+    <string name="third_fragment_label">Java Core</string>
+    <string name="jcore_fragment_label">Java Core theme</string>
+    <string name="four_fragment_label">Java Collections Framework</string>
+    <string name="javacf_fragment_label">Java Collections Framework theme</string>
+    <string name="five_fragment_label">Java 8</string>
+    <string name="java8_fragment_label">Java 8 theme</string>
+    <string name="six_fragment_label">Java Input/Output</string>
+    <string name="inout_fragment_label">Java Input/Output theme</string>
+    <string name="seven_fragment_label">Multithreading</string>
+    <string name="mreading_fragment_label">Multithreading theme</string>
+    <string name="eight_fragment_label">Serialisation</string>
+    <string name="serial_fragment_label">Serialisation theme</string>
+    <string name="nine_fragment_label">JDBC</string>
+    <string name="jdbc_fragment_label">JDBC theme</string>
+    <string name="ten_fragment_label">JSP, Servlets, JSTL</string>
+    <string name="jsj_fragment_label">JSP, Servlets, JSTL theme</string>
+    <string name="eleven_fragment_label">Базы данных</string>
+    <string name="bd_fragment_label">Базы данных theme</string>
+    <string name="twelve_fragment_label">SQL</string>
+    <string name="sql_fragment_label">SQL theme</string>
+    <string name="thirteen_fragment_label">JUnit</string>
+    <string name="junit_fragment_label">JUnit theme</string>
+    <string name="fourteen_fragment_label">Log4J</string>
+    <string name="log4j_fragment_label">Log4J theme</string>
+    <string name="fifteen_fragment_label">UML</string>
+    <string name="uml_fragment_label">UML theme</string>
+    <string name="sixteen_fragment_label">XML</string>
+    <string name="xml_fragment_label">XML theme</string>
+    <string name="seventeen_fragment_label">Design patterns</string>
+    <string name="dp_fragment_label">Design patterns theme</string>
+    <string name="eighteen_fragment_label">HTML</string>
+    <string name="html_fragment_label">HTML theme</string>
+    <string name="nineteen_fragment_label">CSS</string>
+    <string name="css_fragment_label">CSS theme</string>
+    <string name="twelves_fragment_label">WEB</string>
+    <string name="web_fragment_label">WEB theme</string>
+
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="TextName">TextTheme</string>
+    <string name="find">Поиск</string>
+</resources>

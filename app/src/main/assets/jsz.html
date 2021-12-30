@@ -1,0 +1,178 @@
+<p lang="ru-RU" align="center"><span style="color: #303030;"><span
+        style="font-family: 'Roboto Slab', 'Times New Roman';"><span
+        style="font-size: large;"><strong>Ответы на вопросы на собеседование Сериализация. </strong></span></span></span>
+</p>
+<p lang="en-US" align="center">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое сериализация?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Сериализация - это процес чтения или записи объекта. Это процесс сохранения состояния объекта и считывание этого состояния. Для реализации сериализации нужен интерфейс - маркер Serializable. Обратная операция - перевод байтов в объект, называется десериализацией.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как исключить поля из сериализации?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Для того чтоб исключить поля из сериализуемого потока, необходимо пометить поле модификатором transient.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Transient что значит?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><a name="more"></a> <span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Свойства класса, помеченные модификатором transient, не сериализуются.&nbsp;Обычно в таких полях хранится промежуточное состояние объекта, которое, к примеру, проще вычислить, чем сериализовать, а затем десериализавать. Другой пример такого поля - ссылка на экземпляр объекта, который не требует сериализации или не может быть сериализован.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span style="font-size: medium;"><strong><span
+                style="color: #333333;"><span style="color: #434343;"><span
+                style="font-family: Arial, sans-serif;"><span lang="ru-RU">Как изменить стандартное поведение сериализации/десериализации?</span></span></span></span></strong></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">В большинстве случаев мы не определяем поведение вручную, а полагаемся на стандартную реализацию, и очень не удобно постоянно переопределять какие-то методы сериализации + постоянно следить за добавлением новых полей, добавлять их в методы. Ну и специально для этих целей есть Externalizable.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Тем не менее, мы знаем, что можно изменить стандартное поведение сериализации предопределив и поместив в свои файлы классов два метода:</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/jsz/jsz1.jpg" width="640"
+        height="32" name="Picture 1" align="bottom" border="0"/> </a> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Обратите внимание, что оба метода объявлены как private, поскольку это гарантирует что методы не будут переопределены или перезагружены. Весь фокус в том, что виртуальная машина при вызове соответствующего метода автоматически проверяет, не были ли они объявлены в классе объекта. Виртуальная машина в любое время может вызвать private методы вашего класса, но другие объекты этого сделать не смогут. Таким образом обеспечивается целостность класса и нормальная работа протокол сериализации.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span style="font-size: medium;"><strong><span
+                style="color: #333333;"><span style="color: #434343;"><span
+                style="font-family: Arial, sans-serif;"><span lang="ru-RU">Вы создали класс, чей суперкласс сериализуемый, но при этом вы не хотите чтобы ваш класс был сериализуемым, как остановить сериализацию?</span></span></span></span></strong></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Вы не можете "разреализовать" интерфейс, поэтому если суперкласс реализует Serializable, то и созданный вами новый класс также будет реализовать его. Чтобы остановить автоматическую сериализацию вы можете применить private методы для создания исключительной ситуации NotSerializableException. Вот как это можно сделать:</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/jsz/jsz2.jpg" width="640"
+        height="108" name="Picture 2" align="bottom" border="0"/> </a> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Любая попытка записать или прочитать этот объект теперь приведет к возникновению исключительной ситуации. Запомните, если методы объявлены как private, никто не сможет модифицировать ваш код не изменяя исходный код класса. Java не позволяет переопределять такие методы.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как создать собственный протокол сериализации?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Вместо реализации интерфейса Serializable, вы можете реализовать интерфейс Externalizable, который содержит два метода:</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/jsz/jsz3.jpg" width="640"
+        height="36" name="Picture 3" align="bottom" border="0"/> </a> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Для создания собственного протокола нужно просто переопределить эти два метода. В отличие от двух других вариантов сериализации, здесь ничего не делается автоматически. Протокол полностью в ваших руках. Хотя это и наиболее сложный способ, при этом он наиболее контролируемый.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какая роль поля serialVersionUID в сериализации?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Поле private static final long serialVersionUID содержит уникальный идентификатор версии сериализованного класса. Оно вычисляется по содержимому класса - полям, их порядку объявления, методам, их порядку объявления. Соответственно, при любом изменении в классе это поле поменяет свое значение.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Это поле записывается в поток при сериализации класса. Кстати, это, пожалуй, единственный известный случай, когда static-поле сериализуется.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем проблема сериализации Singleton-ов?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Проблема в том что после десериализации мы получим другой объект. Таким образом, сериализация дает возможность создать Singleton еще раз, что не совсем не нужно. Конечно можно запретить сериализовать Singleton-ы, но это, фактически, уход от проблемы, а не ее решение.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Решение же заключается в следующем. В классе определяется метод со следующей сигнатурой</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/jsz/jsz4.jpg" width="640"
+        height="26" name="Picture 4" align="bottom" border="0"/> </a> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Модификатор доступа может быть private, protected и по умолчанию (default). Можно, наверное, сделать его и public, но смысла я в этом не вижу. Назначение этого метода - возвращать замещающий объект вместо объекта, на котором он вызван.</span></span></span></span></span></span></span>
+</p>

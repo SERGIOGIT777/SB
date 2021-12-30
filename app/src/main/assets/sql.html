@@ -1,0 +1,930 @@
+<p lang="ru-RU" align="center"><span style="color: #303030;"><span
+        style="font-family: 'Roboto Slab', 'Times New Roman';"><span
+        style="font-size: large;"><strong>Ответы на вопросы на собеседование SQL </strong></span></span></span>
+</p>
+<p lang="en-US" align="center">&nbsp;</p>
+<ul>
+    <li>
+        <p><span style="color: #333333;"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое SQL?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">SQL (structured query language - "язык структурированных запросов") - формальный непроцедурный язык программирования, применяемый для создания, модификации и управления данными в произвольной реляционной базе данных, управляемой соответствующей системой управления базами данных (СУБД). SQL основывается на исчислении кортежей.<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какие есть типы JOIN'ов? Кратко опишите каждый из типов.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">(INNER)JOIN - внутреннее соединение. В результирующем наборе присутствуют только записи, значения связанных полей в которых совпадают.</span></span></span></span>
+</p>
+<p class="western" align="justify"><a name="more"></a> <span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">LEFT JOIN - левое внешнее соединение. В результирующем наборе присутствуют все записи из Table1 и соответствующие им записи из Table2. Если соответствия нет, поля из Table2 будут пустыми.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">RIGHT JOIN - правое внешнее соединение. В результирующем наборе присутствуют все записи из Table2 и соответствующие им записи из Table1. Если соответствия нет, поля из Table1 будут пустыми.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">FULL JOIN - полное внешнее соединение. Комбинация двух предыдущих. В результирующем наборе присутствуют все записи из Table1 и соответствующие им записи из Table2. Если соответствия нет - поля из Table2 будут пустыми. Записи из Table2, которым не нашлось пары в Table1, тоже будут присутствовать в результирующем наборе. В этом случае поля из Table1 будут пустыми.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">CROSS JOIN - Cartesian product. Результирующий набор содержит все варианты комбинации строк из Table1 и Table2. Условие соединения при этом не указывается.<br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое LEFT JOIN, RIGHT JOIN? Чем они отличаются?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Проиллюстрируем каждый тип примерами. Модель данных:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql1.jpg" width="640"
+        height="173" name="Picture 1" align="bottom" border="0"/> </a> </span></span></p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">SELECT Table1.Field1, Table2.Field2 FROM Table1 LEFT JOIN Table2 ON Table1.Key1 = Table2.Key2</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql2.jpg" width="320"
+        height="168" name="Picture 2" align="bottom" border="0"/> </a> </span></span></p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">SELECT Table1.Field1, Table2.Field2 FROM Table1 RIGHT JOIN Table2 ON Table1.Key1 = Table2.Key2</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql3.jpg" width="320"
+        height="167" name="Picture 3" align="bottom" border="0"/> </a> </span></span></p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">LEFT JOIN - левое внешнее соединение. В результирующем наборе присутствуют все записи из Table1 и соответствующие им записи из Table2. Если соответствия нет, поля из Table2 будут пустыми.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">RIGHT JOIN - правое внешнее соединение. В результирующем наборе присутствуют все записи из Table2 и соответствующие им записи из Table1. Если соответствия нет, поля из Table1 будут пустыми.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего используется слово HAVING?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Секция HAVING определяет условие, которое затем применяется к групам строк. Следовательно, это предложение имеет тот же смысл для группы строк, что и предложение WHERE в отношении соодержимого соответствующей таблицы. Синтаксис предложения HAVING&nbsp;</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">HAVING &nbsp;condition где condition содержит агрегатные функции или константы. Важно понимать, что секции HAVING и WHERE взаимно дополняют друг друга. Сначала с помощью ограничений WHERE формируется итоговая выборка, затем выполняется разбивка на группы по значениям полей, заданных в GROUP BY. Далее по каждой группе вычисляется групповая функция и в заключение накладывается условие HAVING.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Пример:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql4.jpg" width="640"
+        height="125" name="Picture 4" align="bottom" border="0"/> </a> </span></span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">SELECT DeptNum, MAX(SALARY) FROM Employees GROUP BY DeptNum HAVING MAX(SALARY) &gt; 1000</span></span></span></span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">В приведенном примере в результат попадут только отделы, максимальная зарплата в которых превышает 1000.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое DDL?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">DDL(Data Definition Language) - Команды определения структуры данных. В состав DDL-группы входят команды, позволяющие определять внутреннюю структуру базы данных. Перед тем, как сохранять данные в БД, необходимо создать в ней таблицы и, возможно, некоторые другие сопутствующие объекты<br/> Пример некоторых DDL-команд:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql5.jpg" width="640"
+        height="103" name="Picture 5" align="bottom" border="0"/> </a> </span></span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое DML?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">DML(Data Manipulation Language) - Команды манипулирования данными. DML-группа содержит команды, позволяющие вносить, изменять, удалять и извлекать данные из таблиц.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Примеры DML-команд:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql6.jpg" width="640"
+        height="125" name="Picture 6" align="bottom" border="0"/> </a> </span></span></p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое TCL?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">TCL(Transaction Control Language) - TCL-команды используются для управления изменениями данных, производимыми DML-командами. С их помощью несколько DML-команд могут быть объединены в единое логическое целое, называемое транзакцией. При этом все команды на изменение данных в рамках одной транзакции либо завершаются успешно, либо все могут быть отменены в случае возникновения каких-либо проблем с выполнением любой из них.<br/> TCL-команды:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql7.jpg" width="640"
+        height="103" name="Picture 7" align="bottom" border="0"/> </a> </span></span></p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое DCL?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">DCL(Data Control Language) - Команды управления доступом. DCL-команды управляют доступом пользователей к БД и отдельным объектам:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql8.jpg" width="640"
+        height="78" name="Picture 8" align="bottom" border="0"/> </a> </span></span></p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какой общий синтаксис команди SELECT?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">В общем виде синтаксис команды SELECT выглядит следующим образом:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql9.jpg" width="640"
+        height="102" name="Picture 9" align="bottom" border="0"/> </a> </span></span></p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">В квадратных скобках указаны необязательные элементы команды. Ключевые слова SELECT и FROM должны присутствовать всегда.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Про NULL в SQL.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Необходимо отметить, что язык SQL, в отличие от языков программирования, имеет встроенные средства поддержки факта отсутствия каких-либо данных. Осуществляется это с помощью NULL-концепции. NULL не является каким-то фиксированным значением, хранящимся в поле записи вместо реальных данных. Значение NULL не имеет определенного типа. NULL &mdash; это индикатор, говорящий пользователю (и SQL) о том, что данные в поле записи отсутствуют. Поэтому его нельзя использовать в операциях сравнения. Для проверки факта наличия-отсутствия данных в SQL введены специальные выражения.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Если вы собираетесь соединить несколько таблиц в запросе (например, n таблиц), сколько условий соединения вам нужно использовать?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Тогда нужно использовать n-1 условий соединения чтоб исключить декартовой соединения, может быть и такое, что потребуется больше чем n-1 условий соединения, и совсем другие условия соединения для дальнейшего сокращения результирующего набора данных.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какое практическое применение временных таблиц?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Временная таблица - это объект базы данных, который хранится и управляется системой базы данных на временной основе. Они могут быть локальными или глобальными. используется для сохранения результатов вызова хранимой процедуры, уменьшение числа строк при соединениях, агрегирование данных из различных источников или замена курсоров и параметризованных представлений.<br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как оператор GROUP BY обрабатывает значение NULL? Ли это общем трактовке таких значений?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">При использовании GROUP BY все значения NULL считаются равными. Значение NULL - это специальное значение, которое можно присвоить ячейке таблицы. Это значение обычно применяется, когда информация в ячейке неизвестна или неприемлема.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем разница между COUNT (*) и COUNT (столбец)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">форма COUNT (столбец) подсчитывает количество значений в "столбец". При подсчете количества значений столбца эта форма функции COUNT не принимает во внимание значение NULL. функция COUNT (*) подсчитывает количество строк в таблице, не игнорирует значение NULL, поскольку эта функция оперирует строками, а не столбцами.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем разница между операторами DISTINCT и GROUP BY?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">DISTINCT - указывает, что для вычислений используются только уникальные значения столбца. NULL считается как отдельное значение. Если нужно удалить только дубликаты лучше использовать DISTINCT. GROUP BY группирует выбранный набор строк для получения набора сводных строк по значениям одного или нескольких столбцов или выражений. GROUP BY создает отдельную группу для всех возможных значений (включая значение NULL). GROUP BY лучше использовать для определения групп выходных строк, к которым могут применяться агрегатные функции (COUNT, MIN, MAX, AVG и SUM).</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Есть таблица table1 с колонками id и datetime написать запрос который вернет максимальное значение id и значение даты для этого id.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Есть множество решений - самое простое - это получать max значение для id и потом вывести значения:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql10.jpg" width="640"
+        height="25" name="Picture 10" align="bottom" border="0"/> </a> </span></span></p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span
+        lang="ru-RU">или</span></span></span></span></p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql11.jpg" width="640"
+        height="24" name="Picture 11" align="bottom" border="0"/> </a> </span></span></p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">можно и так (mysql)</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql12.jpg" width="640"
+        height="25" name="Picture 12" align="bottom" border="0"/> </a> </span></span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для чего нужны операторы UNION, INTERSECT, EXCEPT?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Оператор UNION - применяется для объединения результатов двух SQL-запросов в единую таблицу, состоящую из похожих срок. Оба запроса Должны возвращать одинаковое число столбцов и совместимые типы данных в соответствующих столбцах.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Оператор INTERSECT - используется для нахождения пересечения двух множеств. Результатом его выполнения будет множество строк, которые присутствуют в обоих множествах.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Оператор EXCEPT - используется для нахождения разности двух множеств. Результатом выполнения является множество строк из множества 1, которые отсутствуют в множестве 2.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Приоритет выполнения операторов над множествами:</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">INTERSECT -&gt; EXCEPT -&gt; UNION</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что лучше использовать соединение или подзапросы?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Обычно лучше использовать JOIN, поскольку в большинстве случаев он понятен, и лучше оптимизируется с помощью Database Engine. но не всегда. Соединение имеет преимущество над подзапросов в случае, когда список выбора SELECT в запросе содержит столбцы более чем одной таблицы.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Подзапросы лучшие тогда, когда нужно вычислять агрегатные значение и использовать их во внешних запросах для сравнений.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что делает функция EXISTS?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Аргументом функции EXISTS есть внутренний запрос. она возвращает истину, если запрос возвращает один или более строк, и возвращает ложь если запрос вернет ноль строк.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Использование оператора PIVOT.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Реляционный оператор PIVOT можно использовать для изменения возвращающего табличное значение выражения в другой таблице. Оператор PIVOT разворачивает возвращающее табличное значение выражение, преобразуя уникальные значения одного столбца выражения в несколько выходных столбцов, а также, в случае необходимости, объединяет оставшиеся повторяющиеся значения столбца и отображает их в выходных данных.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Опишите разницу типов данных DATETIME и TIMESTAMP.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">DATETIME предназначен для хранения целого числа: YYYYMMDDHHMMSS. И это время не зависит от временной зоны настроенной на сервере.Хранит: 8 байт TIMESTAMP &nbsp;хранит значение равное количеству секунд, прошедших с полуночи 1 января 1970 года по усреднённому времени Гринвича. При получении из базы отображается с учётом часового пояса. Хранит: 4 байта.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для каких числовых типов недопустимо использовать операцию сложения (вычитания), а значит и функцию SUM()?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">В качестве операндов операций сложения и вычитания допустимо любое корректное выражение любого типа данных числовой категории, кроме типа данных bit.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое хранимые процедуры?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Хранимая процедура - компилируемый набор SQL-инструкций, являющийся частью базы данных и хранимый на сервере. Есть много общего между ХП и обычными процедурами языков программирования: они могут иметь входные параметры и выходной результат, они могут как выполнять различные численные вычисления, так и выполнять стандартные операции с БД. Как и в процедурах других языков программирования, в них могут быть циклы и ветвления.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Функции ранжирования что это и какие существует?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ранжирующие функции возвращают ранжирующее значение для каждой строки в секции. В зависимости от используемой функции значения некоторых строк могут совпадать. Ранжирующие функции являются недетерминированными.&nbsp;</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Transact-SQL содержит следующие ранжирующие функции:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span
+                lang="ru-RU">RANK</span></span></span></span></span></span></span></p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span
+                lang="ru-RU">NTILE</span></span></span></span></span></span></span></p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">DENSE_RANK</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">ROW_NUMBER</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Может ли значение в столбце(ах), на который наложено ограничение foreign key, равняться null?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Может, если на данный столбец не наложено ограничение not null, пример: при построении таблицы дерева файловой системы, где столбец foreign key - ссылка на эту же самую таблицу, на кортеж с информацией о родительской директории, тогда для корневой директории файловой системы в столбце родительской директории будет - null.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Назовите основные свойства транзакции.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">ACID - atomicity (атомарность), consistency (непротиворечивость), isolation (изолированность), durability (устойчивость).</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Свойство атомарности гарантирует неделимость набора операторов, которые изменяют данные в базе данных и являются частью транзакции. Это означает, что или выполняются все изменения данных в транзакции, или в случае любой ошибки все уже выполненные изменения отменяются.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Согласованность гарантирует, что транзакция не даст возможности базе данных содержать несогласованные данные. Другими словами, трансформация данных в рамках одной транзакции переводит базу данных из одного согласованного состояния в другое согласованное состояние.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Свойство изолированности разделяет все одновременно выполняющиеся транзакции. Другими словами, ни одна активная транзакция не может видеть изменения данных, выполненные в параллельной, но не завершенной транзакции. Это означает, что для обеспечения изолированности для некоторых транзакций может быть выполнен откат.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Устойчивость - после своего завершения транзакция сохраняется в системе, которую ничто не может вернуть в исходное (до начала транзакции) состояние, т.е. происходит фиксация транзакции, означающая, что ее действие постоянно даже при сбое системы.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как удалить повторяющиеся строки с использованием ключевого слова Distinct?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">SELECT DISTINCT columnsName FROM tableName;</span></span></span></span>
+    <span style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+            style="font-size: medium;"><span lang="ru-RU">где: columnsName - одно или несколько реальных имен столбцов,перечисленных через запятую; tableName - имя той таблицы, из которой выбираются эти столбцы. Если в предложение SELECT DISTINCT включить более одного столбца, то в результате уникальность любой строки будет определяться уникальностью соответствующей комбинации всех значений столбцов, включенных в предложение, на этой самой строке среди аналогичных комбинаций, соответствующих другим строкам.&nbsp;</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Несмотря на то что значения null никогда не бывают равны друг другу (поскольку считаются неизвестными), предложение DISTINCT , напротив, считает их дубликатами. Поэтому команда SELECT DISTINCT вернет только одно значение null, независимо от того, сколько значений null она встретит.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Когда полное сканирование таблицы выгоднее доступа по индексу? Опишите вкратце общие принципы, как оптимизатор выбирает производить ли полное сканирование таблицы или доступ по индексу.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Полное сканирование производится многоблочным чтением. Сканирование по индексу - одноблочным. Также, при доступе по индексу сначала идет сканирование самого индекса, а затем чтение блоков из таблицы. Число блоков, которые надо при этом прочитать из таблицы зависит от фактора кластеризации.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Если суммарная стоимость всех необходимых одноблочных чтений больше стоимости полного сканирования многоблочным чтением, то полное сканирование выгоднее и оно выбирается оптимизатором. Таким образом, полное сканирование выбирается при слабой селективности предикатов зароса и/или слабой кластеризации данных, либо в случае очень маленьких таблиц.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Имеет ли смысл индексировать поля таблицы, имеющих тип boolean или подобные им - с небольшим количеством возможных значений?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Индекс по логическим полям имеет смысл, только в случае, если значения ИСТИНА и ЛОЖЬ распределены примерно равномерно по таблице. Предельный случай - две трети и одна треть.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое агрегатная функция? Приведите примеры агрегатных функций в SQL.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Агрегатная функция - это функция, которая возвращает одиночное значение на основании множества записей.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Вот список некоторых агрегатных функций SQL:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">COUNT(*) - Возвращает количество строк источника записей</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">COUNT - Возвращает количество значений в указанном столбце</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">SUM - Возвращает сумму значений в указанном столбце</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">AVG - Возвращает среднее значение в указанном столбце</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">MIN - Возвращает минимальное значение в указанном столбце</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">MAX - Возвращает максимальное значение в указанном столбце</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Дайте определение третьей нормальной форме БД.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Определение третьей нормальной форме БД.</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Любое поле любой записи хранит только одно значение. (1NF) Например, если в поле хранится список идентификаторов, разделённых запятыми, то это нарушение данного определения.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Выполняется условие 1NF и любое неключевое поле полностью зависит от ключа. (2NF) Например, у нас есть запись с полями (Идентификатор, Название CD-Диска, Название группы), где ключом является поле &laquo;Идентификатор&raquo;. При этом, очевидно, что поле &laquo;Название группы&raquo; зависит не только от &laquo;Идентификатора&raquo; но и от поля &laquo;Название CD-Диска&raquo;. Поэтому такая БД не находится во второй нормальной форме.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Выполняется условие 2NF и нет неключевых полей зависящих от значения других неключевых полей. Например у нас в записи хранятся код региона и его название. Понятно, что название региона зависит от кода, и наоборот, поэтому такая БД не будет находиться в третьей нормальной форме.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое денормализация БД? Для чего она нужна?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Денормализация - это процесс осознанного приведения базы данных к виду, в котором она не будет соответствовать правилам нормализации. Обычно это необходимо для повышения производительности и скорости извлечения данных, за счет увеличения избыточности данных.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Если приложению необходимо часто выполнять выборки, которые занимают слишком много времени (например, объединение данных из множества таблиц), то следует рассмотреть возможность проведения денормализации.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Возможное решение следующее: вынести результаты выборки в отдельную таблицу. Это позволит увеличить скорость выполнения запросов, но также означает появление необходимости в постоянном обслуживании этой новой таблицы.&nbsp;Прежде чем приступать к денормализации, необходимо убедится, что ожидаемые результаты оправдывают издержки, с которыми придется столкнуться.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что такое триггер?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Триггер - это SQL процедура, которая срабатывает при каком-нибудь событии (INSERT, DELETE или UPDATE). Триггеры хранятся и управляются СУБД. Триггеры используются для поддержания ссылочной целостности данных в одинаковый манер реагируя на события изменения этих данных. Триггер не может быть вызван или выполнен вручную, СУБД автоматически вызывает его после модификации данных в соответствующей таблице. В этом и есть его отличие от хранимых процедур, которые нужно выполнять вручную вызовом CALL. Также триггер может вызывать другие процедуры.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Триггер также может содержать вызовы INSERT, DELETE и UPDATE внутри себя, таким образом вызывая другой триггер. Такие триггеры называются вложенными (nested).<br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое курсоры в базах данных?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Курсор - это объект базы данных, который позволяет приложениям работать с записями "по-одной", а не сразу с множеством, как это делается в обычных SQL командах.<br/> Порядок работы с курсором такой:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Определить курсор (DECLARE)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Открыть курсор (OPEN)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Получить запись из курсора (FETCH)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Обработать запись</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Закрыть курсор (CLOSE)</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какие компромиссы предлагает использование индексов?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Некоторые из них:</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Более быстрые выборки, но более медленные изменения. (При изменениях тратиться время на перестройку индекса).</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Для хранения индексов необходимо дополнительное дисковое пространство.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU"><strong>Что делает SQL операция MERGE?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Операция MERGE официально появилась в стандарте ANSI SQL:2008.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Она позволяет одновременно вставлять или изменять записи таблицы согласно критерию. При выполнении критерия строки изменяются, иначе - вставляются. Ее можно заменить последовательным вызовом INSERT и UPDATE. В некоторых базах данных похожая операция называется UPSERT.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем различие между выражениями HAVING и WHERE?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">WHERE - это ограничивающее выражение. Оно выполняется до того, как будет получен результат операции.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">HAVING - фильтрующее выражение. Оно применяется к результату операции и выполняется уже после того как этот результат будет получен, в отличии от where.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Выражения WHERE используются вместе с операциями SELECT, UPDATE, DELETE, в то время как HAVING только с SELECT и предложением GROUP BY.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Например, WHERE нельзя использовать таким образом:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql13.jpg" width="640"
+        height="24" name="Picture 13" align="bottom" border="0"/> </a> </span></span></p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">В данном случае больше подходит HAVING:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/sql/sql14.jpg" width="640"
+        height="23" name="Picture 14" align="bottom" border="0"/> </a> </span></span></p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">То есть, использовать WHERE в запросах с агрегатными функциями нельзя, для этого и был введен HAVING.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое целостность данных? Объясните, что такое ограничения.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Целостность данных - важное свойство SQL. При правильном использовании оно обеспечивает корректность и валидность хранимых данных в любой момент времени. Также, с их помощью можно обнаруживать ошибки в приложениях, которые тяжело найти другими способами. Целостность данных поддерживается с помощью ограничений.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">В SQL стандарта ANSI есть 4 основных ограничения: PRIMARY KEY, CHECK, UNIQUE и FOREIGN KEY. Они не являются обязательными для таблицы.</span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">PRIMARY KEY - набор полей (1 или более), значения которых образуют уникальную комбинацию и используются для однозначной идентификации записи в таблице. Для таблицы может быть создано только одно такое ограничение. Данное ограничение используется для обеспечения целостности сущности, которая описана таблицей.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">CHECK используется для ограничения множества значений, которые могут быть помещены в данный столбец. Это ограничение используется для обеспечения целостности предметной области, которую описывают таблицы в базе.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ограничение UNIQUE обеспечивает отсутствие дубликатов в столбце или наборе столбцов. Разница между PRIMARY KEY и UNIQUE описана в primary и unique ключи</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ограничение FOREIGN KEY защищает от действий, которые могут нарушить связи между таблицами. FOREIGN KEY в одной таблице указывает на PRIMARY KEY в другой. Поэтому данное ограничение нацелено на то, чтобы не было записей FOREIGN KEY, которым не отвечают записи PRIMARY KEY. Таким образом, FOREIGN KEY поддерживает ссылочную целостность данных.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем отличие между кластерными индексами и некластерными?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Некластерные индексы создаются СУБД по умолчанию. Данные физически расположены в произвольном порядке, но логически упорядочены согласно индексу. Такой тип индексов подходит для таблиц, где часто изменяются значения.</span></span></span></span>
+</p>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">При кластерном индексировании данные физически упорядочены, что серьезно повышает скорость выборок данных (но только в случае последовательного доступа к данным). Для одной таблицы может быть создан только один кластерный индекс.<br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какие отличия между ограничениями primary и unique?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Ограничения primary и unique призваны обеспечить уникальность значений столбца, на котором они определены. Но по умолчанию ограничение primary создает кластерный индекс на столбце, а unique - некластерный. Другим отличием является то, что primary не разрешает NULL записей, в то время как unique разрешает только одну NULL запись.</span></span></span></span>
+</p>
+<p class="western">&nbsp;</p>

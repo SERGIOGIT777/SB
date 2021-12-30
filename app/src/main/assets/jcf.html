@@ -1,0 +1,1921 @@
+<p lang="ru-RU" align="center"><span style="color: #303030;"><span
+        style="font-family: 'Roboto Slab', 'Times New Roman';"><span
+        style="font-size: large;"><strong>Ответы на вопросы на собеседование Java Collections Framework </strong></span></span></span>
+</p>
+<p lang="en-US" align="center">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><strong><span style="color: #333333;"><span
+                style="color: #434343;"><span style="font-family: Arial, sans-serif;"><span
+                style="font-size: medium;"><span
+                lang="ru-RU">Что такое Коллекция?</span></span></span></span></span></strong></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Коллекции - это хранилища или контейнеры, поддерживающие различные способы накопления и упорядочения объектов с целью обеспечения возможностей эффективного доступа к ним. Они представляют собой реализацию абстрактных структур данных, поддерживающих три основные операции:</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">добавление нового элемента в коллекцию;</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">удаление элемента из коллекции;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">изменение элемента в коллекции.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Назовите основные интерфейсы коллекций и их имплементации.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><a name="more"></a> <span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Сollection расширяет три интерфейса: List, Set, Queue.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">List - хранит упорядоченные елементы(могут быть одинаковые); Имеет такие реализации как&nbsp;LinkedList, ArrayList и Vector.</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Vector синхронизирован, и по этому в одном потоке, он работает медленней&nbsp;остальных реализаций.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">ArrayList - его преимущество в навигации по коллекции.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">LinkedList - Его преимущество в во вставке и удалении элементов в коллекции.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-size: medium;"><span lang="ru-RU"><br/> </span></span><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Set - коллекции, которые не содержат повторяющихся элементов.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Основные реализации: HashSet, TreeSet, LinkedHashSet</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">TreeSet - упорядочивает элементы по их значениям;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">HashSet - упорядочивает элементы по их хэш ключах, хотя на первый взляд может показаться что элементы хранятся в случайном порядке.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">LinkedHashSet - хранит элементы в порядке их добавления</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-size: medium;"><span lang="ru-RU"><br/> </span></span><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Queue - интерфейс для реализации очереди в джава.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Основные реализации: LinkedList, PriorityQueue.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Очереди работают по принципу FIFO &ndash; first in first out.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-size: medium;"><span lang="ru-RU"><br/> </span></span><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Map - интерфейс для реализации так называемой карты, где элементы хранятся с их ключами.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Основные реализации: HashTable, HashMap, TreeMap, LinkedHashMap</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">HashTable - синхронизированна, объявлена уставревшей.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">HashMap - порядок елементов рассчитывается по хэш ключу;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">TreeMap - элементы хранятся в отсортированном порядке</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">LinkedHashMap - элементы хранятся в порядке вставки</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Ключи в Мар не могут быть одинаковыми!</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Синхронизировать не синхронизированные коллекции и карты можно посредством класса Collections.synchronizedMap(MyMap)\ synchronizedList(MyList).</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Чем отличается ArrayList от LinkedList? В каких случаях лучше использовать первый, а в каких второй?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Отличие заключается в способе хранения данных. ArrayList хранит в виде массива, а LinkedList - в виде списка (двунаправленного). В ArrayList быстрее происходит сортировка, т.к. для ее выполнения данные списка копируются в массив (а копировать из массива ArrayList в массив для сортировки быстрее). При большом числе операций добавления и удаления LinkedList должен быть более удачным выбором, т.к. при этих операциях не приходится перемещать части массива. Если при добавлении в ArrayList превышается его объем, размер массива увеличивается, новая емкость рассчитывается по формуле (oldCapacity * 3) / 2 + 1, поэтому лучше указывать размер при создании или, если он не известен, использовать LinkedList (но это может быть существенно при слишком уж больших объемах данных).</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Чем отличается HashMap от Hashtable?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Класс HashMap по функционалу очень похож на Hashtable. Главное отличие в том, что методы класса Hashtable синхронизированы, а HashMap - нет. Кроме этого класс HashMap в отличии от Hashtable разрешает использование null в качестве ключей и значений.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;">&nbsp;<span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Наличие синхронизации в Hashtable уменьшает производительность кода, использующего данный класс. Поэтому классы JCF (Java Collections Framework, появившийся в Java 2), в том числе и HashMap, несинхронизированы. Если синхронизация все же нужна, можно использовать методы класса Collections: Collections.synchronizedMap(map), Collections.synchronizedList(list) или Collections.synchronizedSet(set).</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;">&nbsp;<span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Данные методы возвращают синхронизированный декоратор переданной коллекции. При этом все равно в случае итерирования по коллекции требуется ручная синхронизация.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;">&nbsp;<span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Начиная с Java 6 JCF был расширен специальными коллекциями, поддерживающими многопоточный доступ, такими как CopyOnWriteArrayList и ConcurrentHashMap.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Чем отличается ArrayList от Vector?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Методы класса Vector синхронизированы, в то время как ArrayList - нет.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как сравниваются елементы коллекций?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Для сравнения элементов коллекций &nbsp;используется метод equals() и hashcode();Эти методы унаследованы от класса Object.</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Если наш пользовательский класс &nbsp;переопределяет equals(), то он должен и переопределить hashcode()</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Если &nbsp;два объекта эквивалентны, то и &nbsp;хэш коды этих объектов тоже должны быть равны</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Если &nbsp;поле не используется в equals(), то оно и не должно использоваться в hashcode().</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Расположите в виде иерархии следующие интерфейсы: List, Set, Map, SortedSet, &nbsp;SortedMap, Collection,Iterable, Iterator, NavigableSet, NavigableMap.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf1.jpg" width="400"
+        height="317" name="Picture 1" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Почему Map - это не Collection, в то время как List и Set являются Collection?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Коллекция (List и Set) представляет собой совокупность некоторых элементов (обычно экземпляров одного класса).Map -это совокупность пар "ключ"-"значение".</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Соответственно некоторые методы интерфейса Collection нельзя использовать в Map. Например, метод remove(Object o) в интерфейсе Collection предназначен для удаления элемента, тогда как такой же метод remove(Object key) в интерфейсе Map - удаляет элемент по заданному ключу.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Дайте определение понятию "iterator".</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Итератор - объект, позволяющий перебирать элементы коллекции. Например foreach реализован с использованием итератора. Одним из ключевых методов интерфейса Collection является метод Iterator&lt;E&gt; iterator(). Он возвращает итератор - то есть объект, реализующий интерфейс Iterator.<br/> Интерфейс Iterator имеет следующее определение:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf2.jpg" width="640" height="103" name="Picture 2"
+        align="bottom" border="0"/> </a> </span></span></p>
+<p class="western" lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что вы знаете об интерфейсе Iterable?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Все коллекции из java.util реализуют интерфейс Collection, который, в свою очередь, расширяет интерфейс Iterable. В интерфейсе Iterable описан только один метод: Iterator iterator(); Он возвращает Iterator, т.е. объект, который поочерёдно возвращает все элементы коллекции.</span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как одной строчкой преобразовать HashSet в ArrayList?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf3.jpg" width="400" height="127" name="Picture 3"
+        align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как одной строчкой преобразовать ArrayList в HashSet?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf4.jpg" width="400" height="129" name="Picture 4"
+        align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как перебрать все ключи Map учитывая, что Map - это не Iterable?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Использовать метод keySet(), который возвращает множество (Set&lt;K&gt;) ключей.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как перебрать все значения Map учитывая, что Map - это не Iterable?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Использовать метод values(), который возвращает коллекцию (Collection&lt;V&gt;) значений.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как перебрать все пары ключ-значение в Map учитывая, что Map - это не Iterable?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Использовать метод entrySet(), который возвращает множество (Set&lt;Map.Entry&lt;K, V&gt;) пар "ключ"-"значение".</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем проявляется &ldquo;сортированность&rdquo; SortedMap, кроме того, что toString() &nbsp;выводит все по порядку?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Естественное упорядочивание (natural ordering) отражается при итерации по коллекции ключей или значений хэш-таблицы (возвращаемых методами keySet(), values() и entrySet()).</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как одним вызовом копировать элементы из любой Collection в массив?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf5.jpg" width="640" height="181" name="Picture 5"
+        align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Реализуйте симметрическую разность двух коллекций используя методы Collection (addAll(), removeAll(), retainAll()).</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Симметрическая разность двух коллекций - это множество элементов, одновременно не принадлежащих обоим исходным коллекциям.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf6.jpg" width="640" height="262" name="Picture 6"
+        align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Сравните Enumeration и Iterator.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Оба интерфейса предназначены для обхода коллекций. Интерфейс Iterator был введен несколько позднее в Java Collections Framework и его использование предпочтительнее.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Основные различия Iterator по сравнению с Enumeration:</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">наличие метода remove() для удаления элемента из коллекции при обходе;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">исправлены имена методов для повышения читаемости кода.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как между собой связаны Iterable и Iterator?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Интерфейс Iterable имеет только один метод - iterator(), который возвращает итератор коллекции для её обхода.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как между собой связаны Iterable, Iterator и &laquo;for-each&raquo; введенный в Java 5?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Экземпляры классов, реализующих интерфейс Iterable, могут использоваться в конструкции foreach.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Сравните Iterator и ListIterator.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">ListIterator расширяет интерфейс Iterator, позволяя клиенту осуществлять обход коллекции в обоих направлениях, изменять коллекцию и получать текущую позицию итератора.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">При этом важно помнить, что ListIterator не указывает на конкретный элемент, а его текущая позиция располагается между элементами, которые возвращают методы previous() и next(). Таким образом, модификация коллекции осуществляется для последнего элемента, который был возвращен методами previous() и next().</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что произойдет, если я вызову Iterator.next() не &laquo;спросив&raquo; Iterator.hasNext()?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Если итератор указывает на последний элемент коллекции, то возникнет исключение NoSuchElementException, иначе будет возвращен следующий элемент.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что произойдет, если я вызову Iterator.next() перед этим 10 раз вызвав &nbsp;Iterator.hasNext()? Я пропущу 9 элементов?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Нет, hasNext() осуществляет только проверку наличия следующего элемента.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Если у меня есть коллекция и порожденный итератор, изменится ли коллекция, если я вызову iterator.remove()?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Вызов метода iterator.remove() возможен только после вызова метода iterator.next() хотя бы раз, иначе появится исключение IllegalStateException().</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Если iterator.next() был вызван прежде, то iterator.remove() удалит элемент, на который указывает итератор.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Если у меня есть коллекция и порожденный итератор, изменится ли итератор, если я вызовуcollection.remove(..)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Итератор не изменится, но при следующем вызове его методов возникнет исключение ConcurrentModificationException.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Зачем добавили ArrayList, если уже был Vector?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Обе структуры данных предназначены для хранения коллекции элементов, в том числе дупликатов и null. Они основаны на использовании массивов, динамически расширяющихся при необходимости.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Класс Vector был введен в JDK 1.0 и не является частью Java Collection Framework. Методы класса Vector синхронизированы, что обеспечивает потокобезопасность, но это приводит к снижению производительности, поэтому и был введен класс ArrayList, методы которого не синхронизированы.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В реализации класса ArrayList есть следующие поля: Object[] elementData, int size. Объясните, зачем хранить отдельно size, если всегда можновзять elementData.length?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Размер массива elementData представляет собой вместимость (capacity) ArrayList, которая всегда больше переменной size - реального количества хранимых элементов. С добавлением новых элементов вместимость автоматически возрастает при необходимости.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>LinkedList - это односвязный, двусвязный или четырехсвязный список?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Двухсвязный список: каждый элемент LinkedList хранит ссылку на предыдущий и следующий элементы.<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какое худшее время работы метода contain() для элемента, который есть в LinkedList (O(1), O(log(N)), O(N), O(N*log(N)), O(N*N))?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">O(N). Время поиска элемента линейно пропорционально количеству элементов с списке.<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какое худшее время работы метода contain() для элемента, который есть в ArrayList (O(1), O(log(N)), O(N), O(N*log(N)), O(N*N))?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">O(N). Время поиска элемента линейно пропорционально количеству элементов с списке.<br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какое худшее время работы метода add() для LinkedList (O(1), O(log(N)), O(N), O(N*log(N)), O(N*N))?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">O(N). Здесь стоит заметить, что добавление элемента в конец списка с помощью методом add(value), addLast(value) и добавление в начало списка с помощью addFirst(value) выполняется за время O(1).<br/> O(N) - будет при добавление элемента в отсортированный список, а также при добавлении элемента с помощью метода add(index, value).<br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какое худшее время работы метода add() для ArrayList (O(1), O(log(N)), O(N), O(N*log(N)), O(N*N))?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">O(N). Вставка элемента в конец списка осуществляется за время O(1), но если вместимость массива недостаточна, то происходит создание нового массива с увеличенным размером и копирование всех элементов из старого массива в новый.<br/> </span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Сколько выделяется элементов в памяти при вызове ArrayList.add()?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Если в массиве достаточно места для размещения нового элемента, то дополнительное место в памяти не выделяется. Иначе происходит создание нового массива с размером:</span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf7.jpg" width="520"
+        height="51" name="Picture 7" align="bottom" border="0"/> </a> </span></span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Другими словами, создается новый массив, размер которого вычисляется как умножение старого размера на 1.5 (это верно для JDK 1.7, в более ранних версиях вычисления отличаются).</span></span></span></span></span></span></span>
+</p>
+<p class="western" align="justify"><br/></p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Сколько выделяется элементов в памяти при вызове LinkedList.add()?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Создается один новый экземпляр вложенного класса Node.<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Оцените количество памяти на хранение одного примитива типа byte в &nbsp;LinkedList?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Каждый элемент LinkedList хранит ссылку на предыдущий элемент, следующий элемент и ссылку на данные. Для x32 систем каждая ссылка занимает 32 бита (4 байта). Сам объект типа Node занимает приблизительно 8 байт. Размер каждого объекта в Java кратен 8, соответственно получаем 24 байта. Примитив типа byte занимает 1 байт памяти, но в списке примитивы упаковываются, соответственно получаем еще 8 байт. Таким образом, в x32 JVM около 32 байтоввыделяется для хранения одного значения типа byte в LinkedList.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Для 64-битной JVM каждая ссылка занимает 64 бита (8 байт). Вычисления аналогичны.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Оцените количество памяти на хранение одного примитива типа byte в ArrayList?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">ArrayList основан на массиве. Каждый элемент массива хранит примитивный тип данных - byte, размер которого 1 байт.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Я добавляю элемент в середину List-а: list.add(list.size()/2, newElem). Для кого эта операция медленнее &mdash; для ArrayList или для LinkedList?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Для ArrayList:</span></span></span></span></span></span></span></p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">проверка массива на вместимость. Если вместимости недостаточно, то увеличение размера массива и копирование всех элементов в новый массив ( O(N) );</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">копирование всех элементов, расположенных правее от позиции вставки, на одну позицию вправо ( O(N/2));</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">вставка элемента ( O(1) ).</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Для LinkedList:</span></span></span></span></span></span></span></p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">поиск позиции вставки ( O(N/2) );</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">вставка элемента ( O(1) ).</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">В худшем случае вставка в середину списка эффективнее для LinkedList. В остальных - скорее всего, для ArrayList, поскольку копирование элементов осуществляется за счет системного метода System.arraycopy().</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как перебрать элементы LinkedList в обратном порядке, не используя медленный get(index)?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Использовать обратный итератор. Для этого в LinkedList есть метод descendingIterator().</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как одним вызовом из List получить List со всеми элементами, кроме первых и последних 3-х?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf8.jpg" width="640"
+        height="38" name="Picture 8" align="bottom" border="0"/> </a> </span></p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Могут ли у разных объектов в памяти (ref0 != ref1) быть ref0.hashCode() == ref1.hashCode()?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Да, могут. Метод hashCode() не гарантирует уникальность возвращаемого значения.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Могут ли у разных объектов в памяти (ref0 != ref1) быть ref0.equals(ref1) == true?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Да, могут. Для этого в классе этих объектов должен быть переопределен метод equals().</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Если используется метод Object.equals(), то для двух ссылок x и y метод вернет true тогда и только тогда, когда обе ссылки указывают на один и тот же объект (т.е. x == y возвращает true). </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Могут ли у разных ссылок на один объект в памяти (ref0 == ref1) быть &nbsp;ref0.equals(ref1) == false?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Нет, не может. Метод equals() должен гарантировать свойство рефлексивности: для любых ненулевых ссылок xметод x.equals(x) должен возвращать true.<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Есть класс Point{int x, y;}. Почему хэш-код в виде 31 * x + y предпочтительнее чем x + y?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Множитель создает зависимость значения хэш-кода от очередности обработки полей, а это дает гораздо лучшую хэш-функцию.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Если у класса Point{int x, y;} &laquo;правильно&raquo; реализовать метод equals (return ref0.x == ref1.x &amp;&amp; ref0.y == ref1.y), но сделать хэш-код в виде int hashCode() {return x;}, то будут ли корректно такие точки помещаться и извлекаться из HashSet?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">HashSet использует HashMap для хранения элементов (в качестве ключа используется сам объект). При добавлении элемента в HashMap вычисляется хэшкод и позиция в массиве, куда будет вставлен новый элемент. У всех экземпляров класса Point одинаковый хэшкод, что приводит в вырождению хэш-таблицы в список. При возникновении коллизии осуществляется проверка на наличие уже такого элемента в текущем списке:</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf9.jpg" width="640"
+        height="38" name="Picture 9" align="bottom" border="0"/> </a> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Если элемент найден, то его значение перезаписывается. В нашем случае для разных объектов метод equals() будет возвращать false. Соответственно новый элемент будет добавлен в HashSet. Извлечение элемента также будет осуществляться успешно.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Но производительность такого кода будет низкой и преимущества хэш-таблиц использоваться не будут.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>equals() порождает отношение эквивалентности. Какими из свойств обладает такое отношение: коммутативность, симметричность, рефлексивность, дистрибутивность, ассоциативность, транзитивность?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Метод equals() должен обеспечивать:</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">симметричность (для любых ненулевых ссылок x и y метод x.equals(y) должен возвращать true тогда и только тогда, когда y.equals(x) возвращает true);</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">рефлексивность (для любых ненулевых ссылок x метод x.equals(x) должен возвращать true.);</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">транзитивность (для любых ненулевых ссылок x, y и z, если x.equals(y) возвращает true и y.equals(z)возвращает true, тогда и x.equals(z) должен возвращать true).</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Также есть ещё два свойства: постоянство и неравенство null.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Можно ли так реализовать equals(Object that) {return this.hashCode() == that.hashCode()}?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Строго говоря нельзя, поскольку метод hashCode() не гарантирует уникальность значения для каждого объекта. Однако для сравнения экземпляров класса Object такой код допустим, т.к. метод &nbsp;hashCode() в классе Object возвращает уникальные значения для разных объектов (вычисления основаны на использовании адреса объекта в памяти).</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В equals требуется проверять, что аргумент (equals(Object that)) такого же типа как и сам объект. В чем разница между this.getClass() == that.getClass() и that instanceof MyClass?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Оператор instanceof сравнивает объект и указанный тип. Его можно использовать для проверки является ли данный объект экземпляром некоторого класса, либо экземпляром его дочернего класса, либо экземпляром класса, который реализует указанный интерфейс.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">getClass() = ... проверяет два типа на идентичность.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Для корректной реализации контракта метода equals() необходимо использовать точное сравнение с помощью getClass(). </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Можно ли реализовать метод equals класса MyClass вот так: class MyClass {public boolean equals(MyClass that) {return this == that;}}?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Реализовать можно, но данный метод не переопределяет метод equals() класса Object, а перегружает его.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Будет ли работать HashMap, если все ключи будут возвращать int hashCode() {return 42;}?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Да, будет. Но тогда хэш-таблица вырождается в связный список и теряет свои преимущества.<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Зачем добавили HashMap, если уже был Hashtable?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Класс Hashtable был введен в JDK 1.0 и не является частью Java Collection Framework. Методы класса Hashtable синхронизированы, что обеспечивает потокобезопасность, но это приводит к снижению производительности, поэтому и был введен класс HashMap, методы которого не синхронизированы.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Помимо этого класс HashMap обладает некоторыми другими отличиями: например, позволяет хранить один null ключ и множество null значений.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Согласно Кнуту и Кормену существует две основных реализации хэш-таблицы: на основе открытой адресацией и на основе метода цепочек. Как реализована HashMap? Почему так сделали (по вашему мнению)? В чем минусы и плюсы каждого подхода?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Класс HashMap реализован с использованием метода цепочек, т.е. каждой ячейке массива соответствует свой связный список и при возникновении коллизии осуществляется добавление нового элемента в этот список.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Для метода цепочек коэффициент заполнения может быть больше 1, с увеличением числа элементов производительность убывает линейно. Такие таблицы удобно использовать, если заранее неизвестно количество хранимых элементов, либо их может быть достаточно много, что приводит к большим значениям коэффициента заполнения.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span
+        lang="ru-RU">Среди методов открытой реализации различают:</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">линейное пробирование;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">квадратичное пробирование;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">двойное хеширование.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Основные недостатки структур с методом открытой адресации:</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Количество элементов в таблице не может превышать размера массива. По мере увеличения числа элементов в таблице и повышения коэффициента заполнения (load factor) производительность структуры резко падает, поэтому необходимо проводить перехеширование.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Сложно организовать удаление элемента.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Также первые два метода открытой адресации приводят к проблеме первичной и вторичной группировок.</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Основное преимущество хэш-таблицы с открытой адресацией - это отсутствие затрат на создание и хранение объектов списка. Также проще организовать сериализацию/десериализацию объекта.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Сколько переходов по ссылкам происходит, когда вы делаете HashMap.get(key) по ключу, который есть в таблице?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Возможно, я неправильно понял этот вопрос. За переходы по ссылке в данном ответе я считаю вызовы методов.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf10.jpg" width="622"
+        height="146" name="Picture 10" align="bottom" border="0"/> </a> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;">Рассмотрим первый случай, когда ключ равен&nbsp;null: выполняем метод&nbsp;getForNullKey().</span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf11.jpg" width="617"
+        height="199" name="Picture 11" align="bottom" border="0"/> </a> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;">В цикле&nbsp;foreach&nbsp;проходимся по списку значений для ключа и возвращаем нужное значение. Таким образом, получаем&nbsp;1 переход.</span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;">Второй случай: ключ не равен&nbsp;null. Выполняем метод&nbsp;getEntry(key).</span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf12.jpg" width="640"
+        height="190" name="Picture 12" align="bottom" border="0"/> </a> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Вычисляется хэш-код ключа (метод hash(key)), затем определяется индекс ячейки массива, в которой будем искать значение (метод indexFor(hash, table.length)).</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">После того, как нашли нужную пару "ключ-значение" возвращаем значение (метод entry.getValue()). Таким образом, получаем 4 перехода.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Сколько создается новых объектов, когда вы добавляете новый элемент в HashMap?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Один новый объект статического вложенного класса Entry&lt;K,V&gt;.<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Как работает HashMap при попытке сохранить в нее два элемента по ключам с одинаковым hashCode, но для которых equals == false?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">По значению hashCode вычисляется индекс ячейки массива, в список которой будет происходить добавление элемента. Перед добавлением осуществляется проверка на наличие уже элементов в этой ячейке. Если элементов нет, то происходит добавление. Если возникает коллизия, то итеративно осуществляется обход списка в поисках элемента с таким же ключом и хэш-кодом. Если такой элемент найден, то его значение перезаписывается, а старое - возвращается. Поскольку в условии сказано, что добавляемые ключи - разные, то второй элемент будет добавлен в начало списка.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>HashMap может выродиться в список даже для ключей с разным hashCode. Как это возможно?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Это возможно в случае, если метод, определяющий номер ячейки массива по hashCode будет возвращать одинаковое значение.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какое худшее время работы метода get(key) для ключа, которого нет в таблице (O(1), O(log(N)), O(N), O(N*log(N)), O(N*N))?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">O(N). Худший случай - это поиск ключа в таблице, вырожденной в список, перебор ключей которой занимает линейно пропорциональное время количеству хранимых элементов.<br/> </span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какое худшее время работы метода get(key) для ключа, который есть в таблице (O(1), O(log(N)), O(N), O(N*log(N)), O(N*N))?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">O(N). Аналогичные рассуждения, что и для предыдущего вопроса.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Объясните смысл параметров в конструкторе HashMap(int initialCapacity, float loadFactor).</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">int initialCapacity - исходный размер HashMap (количество корзин в хэш-таблице в момент её создания), по умолчанию имеет значение 16.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;">&nbsp;<span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">float loadFactor - коэффициент заполнения HashMap. Равен отношению числа хранимых элементов в таблице к её размеру. loadFactor - является мерой заполнения таблицы элементами,&nbsp;при превышении количества хранимых таблицей значений , происходит автоматическое перехеширование. Значение по умолчанию 0.75 является хорошим компромиссом между временем доступа и объемом хранимых данных.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем разница между HashMap и IdentityHashMap? Для чего нужна IdentityHashMap? Как может быть полезна для реализации сериализации или клонирования?&nbsp;</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">IdentityHashMap - это структура данных, реализующая интерфейс Map, но использующая сравнение ссылок вместо метода equals() при сравнении ключей (значений). Другими словами, в IdentityHashMap два ключа k1 и k2 будут рассматриваться равными, если выполняется условие k1 == k2.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">IdentityHashMap не использует метод hashCode(), вместо которого применяется метод System.identityHashCode(Object).</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Другое отличие (как следствие) заключается в более высокой производительности IdentityHashMap по сравнению с HashMap, если последний хранит объекты с дорогостоящими методами equals() и hashCode().</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Одним из основных требований к использованию HashMap является неизменяемость</span></span></span></span></span></span></span>
+</p>
+<p class="western"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">ключа, однако это требование не распространяется на IdentityHashMap, который не использует методы equals() и hashCode().</span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Согласно документации, такая структура данных может применяться для реализации сериализации/клонирования. Для выполнения подобных алгоритмов программе необходимо обслуживать таблицу со всеми ссылками на объекты, которые уже были обработаны. Такая таблица не должна рассматривать уникальные объекты как равные, даже если метод equals() возвращает true.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем разница между HashMap и WeakHashMap? Для чего нужна WeakHashMap?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Перед рассмотрением WeakHashMap кратко напомню, что такое WeakReference. В Java существует 4 типа ссылок: сильные (strong reference), мягкие (SoftReference), слабые (WeakReference) и фантомные (PhantomReference). Особенности каждого типа ссылок связаны с работой Garbage Collector. Если объект можно достичь только с помощью цепочки WeakReference (то есть на него не ссылаются сильные и мягкие ссылки), то данный объект будет отмечен для удаления.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">WeakHashMap - это структура данных, реализующая интерфейс Map и основанная на использовании WeakReference для хранения ключей. Таким образом, пара "ключ-значение" будет удалена из WeakHashMap, если на объект-ключ более не имеется сильных ссылок.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">В качестве примера использования такой структуры данных можно привести следующую ситуацию: допустим имеются объекты, которые необходимо расширить дополнительной информацией, при этом изменение класса этих объектов нежелательно либо невозможно. В этом случае добавляем каждый объект в WeakHashMap в качестве ключа, а в качестве значения - нужную информацию. Таким образом, пока на объект имеется сильная ссылка (либо мягкая), можно проверять хэш-таблицу и извлекать информацию. Как только объект будет удален, то WeakReference для этого ключа будет помещен в ReferenceQueue и затем соответствующая запись для этой слабой ссылки будет удалена из WeakHashMap.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В WeakHashMap используются WeakReferences. А почему бы не создать SoftHashMap на SoftReferences?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">SoftHashMap представлена в стронних библиотеках, например, в Apache Commons.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="font-family: Lato, 'Times New Roman';"><span
+                style="font-size: small;"><strong><span style="color: #333333;"><span
+                style="color: #434343;"><span style="font-family: Arial, sans-serif;"><span
+                style="font-size: medium;"><span lang="ru-RU">В WeakHashMap используются WeakReferences. А почему бы не создать PhantomHashMap на PhantomReferences</span></span></span></span></span></strong></span></span><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU">?</span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">PhantomReference при вызове метода get() возвращает всегда null, поэтому, я думаю, создание PhantomHashMap просто невозможно. Плюс назначение такой структуры данных тяжело представить.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Сделайте HashSet из HashMap (используйте только множество ключей, но не множество значений).</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p lang="ru-RU" align="center"><span style="color: #6a6359;"><img
+        src="file:///android_asset/jcf/jcf13.jpg" width="496"
+        height="31" name="Picture 13" align="bottom" border="0"/> </a> </span></p>
+<p lang="ru-RU">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Сделайте HashMap из HashSet (HashSet&lt;Map.Entry&lt;K, V&gt;&gt;).&nbsp;</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="center"><span style="color: #333333;"><span style="color: #434343;"><img
+        src="file:///android_asset/jcf/jcf14.jpg" width="400"
+        height="78" name="Picture 14" align="bottom" border="0"/> </span></span></p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Сравните интерфейсы java.util.Queue и java.util.Deque.</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Согласно документации Deque ("дек", Double Ended Queue) - это линейная коллекция, поддерживающая вставку/извлечение элементов с обоих концов. Помимо этого реализации интерфейса Deque могут строится по принципу FIFO, либо LIFO.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Queue - это очередь, обычно (но необязательно) строится по принципу FIFO (First-In-First-Out) - соответственно извлечение элемента осуществляется с начала очереди, вставка элемента - в конец очереди. Этот принцип нарушает, к примеру, приоритетная очередь (PriorityQueue), использующая переданный comparator при вставке нового элемента, либо расстановка элементов осуществляется согласно естественному упорядочиванию (natural ordering).</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Deque расширяет Queue. Реализации и Deque, и Queue обычно не переопределяют методы equals() и hashCode(), основанные на сравнении хранящихся элементов. Вместо этого используются унаследованные методы класса Object, основанные на сравнении ссылок.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Кто кого расширяет: Queue расширяет Deque, или Deque расширяет Queue?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p class="western" align="justify"><span style="font-family: Halant, 'Times New Roman';"><span
+        style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">Deque расширяет Queue.</span></span></span></span>
+</p>
+<p class="western" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Почему LinkedList реализует и List, и Deque?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">LinkedList позволяет добавлять элементы в начало и конец списка за константное время, что хорошо подходит для реализации интерфейса Deque (в отличие, например, от ArrayList).</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем разница между классами java.util.Arrays и java.lang.reflect.Array?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">java.util.Arrays - класс, содержащий статические методы для работы с массивами, таких как, например, поиск по массиву и его сортировка. java.lang.reflect.Array - класс для работы с массивами при использовании рефлексии. Рефлексия - это механизм, позволяющий исследовать данные о программе во время её выполнения.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем разница между классами java.util.Collection и java.util.Collections?</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Класс java.util.Collections содержит исключительно статические методы для работы с коллекциями. В них входят методы, реализующие полиморфные алгоритмы (такие алгоритмы, использование которых возможно с разными видами структур данных), "оболочки", возвращающие новую коллекцию с инкапсулированной указанной структурой данных и некоторые другие методы. java.util.Collection - это корневой интерфейс Java Collections Framework. Этот интерфейс в основном применяется там, где требуется высокий уровень абстракции, например, в классе java.util.Collections.</span></span></span></span></span></span></span>
+</p>
+<p lang="ru-RU" align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Напишите НЕмногопоточную программу, которая заставляет коллекцию выбросить ConcurrentModificationException.</strong></span></span></span></span></span><span
+                style="color: #434343;"><span style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong><img
+                src="file:///android_asset/jcf/jcf15.jpg"
+                width="570" height="191" name="Picture 15" align="bottom"
+                border="0"/> </strong></span></span></span></span></span></span></span></p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что такое &ldquo;fail-fast поведение&rdquo;?&nbsp;</strong></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Fail-fast поведение означает, что при возникновении ошибки или состояния, которое может привести к ошибке, система немедленно прекращает дальнейшую работу и уведомляет об этом.&nbsp;</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">В Java Collections API итераторы могут использовать либо fail-fast, либо fail-safe поведение, либо быть weakly consistent. Итератор с fail-fast поведением выбросит исключение ConcurrentModificationException, если после его создания была произведена модификация коллекции, т.е. добавлен или удален элемент (без использования метода remove() итератора). Реализация такого поведения осуществляется за счет подсчета количества модификаций коллекции (modification count):&nbsp;</span></span></span></span></span></span></span>
+</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">при изменении коллекции (удаление/добавление элемента) счетчик увеличивается;&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">при создании итератора ему передается текущее значение счетчика;&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="font-size: medium;"><span lang="ru-RU">при каждом обращении к итератору сохраненное значение счетчика сравнивается с текущим, и, если они не совпадают, возникает исключение.&nbsp;</span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Использование fail-fast подхода позволяет избежать недетерминированного поведения программы в течение времени. Также стоит отметить, что fail-fast поведение не может быть абсолютно гарантировано.&nbsp;</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Для множеств еnum-ов есть специальный класс java.util.EnumSet? Зачем? Чем авторов не устраивал HashSet или TreeSet?&nbsp;</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">EnumSet - это одна из разновидностей реализации интерфейса Set для использования с перечислениями (Enum). EnumSet использует массив битов для хранения значений (bit vector), что позволяет получить высокую компактность и эффективность. В структуре данных хранятся объекты только одного типа Enum, который указывается при создании экземпляра EnumSet. Все основные операции выполняются за константное время (O(1)) и в основном несколько быстрее (хотя и негарантированно), чем их аналоги в реализации HashSet. Пакетные операции (bulk operations, например, containsAll() и retainAll()) выполняются очень быстро, если их аргументом является экземпляр типаEnum.&nbsp;</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Помимо этого класс EnumSet предоставляет множество статических методов инициализации для упрощенного и удобного создания экземпляров.&nbsp;</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Итерация по EnumSet осуществляется согласно порядку объявления элементов перечисления.&nbsp;</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>java.util.Stack - считается &laquo;устаревшим&raquo;. Чем его рекомендуют заменять? Почему?&nbsp;</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Рекомендуется использовать интерфейс Deque ("дек", Double Ended Queue) и его реализации. Например:&nbsp;</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/jcf/jcf16.jpg" width="507"
+        height="33" name="Picture 16" align="bottom" border="0"/> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Стек - это структура данных, построенная на принципе LIFO (Last-In-First-Out, либо по-другому FILO). Каждое новое значение добавляется на "вершину" стека, а извлекается последний добавленный элемент (с "вершины" стека). При извлечении элемента он удаляется из структуры данных.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Класс Stack появился в JDK 1.0 и расширяет класс Vector, наследуя его функционал, что несколько нарушает понятие стека (например, класс Vector предоставляет возможность обращаться к любому элементу по индексу). Также использование Deque позволяет следовать принципу программирования на уровне интерфейсов, а не конкретных реализаций, что облегчает дальнейшую поддержку разрабатываемого класса и повышает его гибкость, позволяя при необходимости менять реализацию дека на нужную.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какая коллекция реализует дисциплину обслуживания FIFO?</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">FIFO - First-In-First-Out (первый пришел, первым ушел). По этому принципу обычно построена такая структура данных как очередь (java.util.Queue).</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Какая коллекция реализует дисциплину обслуживания FILO?</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">FILO - First-In-Last-Out (первый пришел, последним ушел). По этому принципу построена такая структура данных как стек (java.util.Stack).</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Приведите пример, когда какая-либо коллекция выбрасывает UnsupportedOperationException.</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/jcf/jcf17.jpg" width="552"
+        height="159" name="Picture 17" align="bottom" border="0"/> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">В данном примере возникнет исключение UnsupportedOperationException, поскольку метод asList() возвращает список фиксированной длины, т.е. удаление/добавление элементов в такой список не поддерживается.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Почему нельзя написать &ldquo;ArrayList&lt;List&gt; numbers = new ArrayList&lt;ArrayList&gt;();&rdquo; но можно &ldquo;List&lt;ArrayList&gt; numbers = new ArrayList&lt;ArrayList&gt;();&rdquo;?</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Это связано с ограничениями использования generic types (обобщенных типов). ArrayList&lt;ArrayList&gt; не является подтипом ArrayList&lt;List&gt;, соответственно использование такой записи запрещено.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>LinkedHashMap - что это еще за &laquo;зверь&raquo;? Что в нем от LinkedList, а что от HashMap?&nbsp;</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Реализация LinkedHashMap отличается от HashMap поддержкой двухсвязанного списка, определяющего порядок итерации по элементам структуры данных. По умолчанию элементы списка упорядочены согласно их порядку добавления в LinkedHashMap (insertion-order). Однако порядок итерации можно изменить, установив параметр конструктора accessOrder в значение true. В этом случае доступ осуществляется по порядку последнего обращения к элементу (access-order). Это означает, что при вызове методов get() или put() элемент, к которому обращаемся, перемещается в конец списка.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">При добавлении элемента, который уже присутствует в LinkedHashMap (т.е. с одинаковым ключом), порядок итерации по элементам не изменяется.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>LinkedHashSet - что это еще за &laquo;зверь&raquo;? Что в нем от LinkedList, а что от HashSet?</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Реализация LinkedHashSet отличается от HashSet поддержкой двухсвязанного списка, определяющего порядок итерации по элементам структуры данных. Элементы списка упорядочены согласно их порядку добавления в LinkedHashSet (insertion-order).</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">При добавлении элемента, который уже присутствует в LinkedHashSet (т.е. с одинаковым ключом), порядок итерации по элементам не изменяется.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Говорят, на LinkedHashMap легко сделать простенький кэш c &ldquo;invalidation policy&rdquo;, знаете как?</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Необходимо использовать LRU-алгоритм (Least Recently Used algorithm) и LinkedHashMap с access-order. В этом случае при обращении к элементу он будет перемещаться в конец списка, а наименее используемые элементы будут постепенно группироваться в начале списка.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Для этого в стандартной реализации LinkedHashMap (source) есть метод</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">removeEldestEntries(), который возвращает true, если текущий объект LinkedHashMap</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">должен удалить наименее используемый элемент из коллекции. Метод вызывается при использовании методов put() и putAll():</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/jcf/jcf18.jpg" width="640"
+        height="194" name="Picture 18" align="bottom" border="0"/> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Простой пример реализации кэша с очисткой старых значений при превышении указанного порога:</span></span></span></span></span></span></span>
+</p>
+<p align="center"><span style="color: #333333;"><img
+        src="file:///android_asset/jcf/jcf19.jpg" width="640"
+        height="227" name="Picture 19" align="bottom" border="0"/> </span></p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Стоит заметить, что LinkedHashMap не позволяет полностью реализовать LRU-алгоритм, поскольку при вставке уже имеющегося в коллекции элемента порядок итерации не меняется.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>Что позволяет сделать PriorityQueue?</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">PriorityQueue - это структура данных, располагающая элементы в порядке натурального упорядочивания, либо используя переданный конструктору Comparator.</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Используя PriorityQueue, можно, например, реализовать алгоритм Дейкстры для поиска кратчайшего пути от одной вершины графа к другой. Либо применять для хранения объектов согласно их приоритету: например, сортировка пациентов врача - экстренные пациенты перемещаются в начало очереди, менее срочные пациенты - ближе к концу очереди.</span></span></span></span></span></span></span>
+</p>
+<p align="justify">&nbsp;</p>
+<ul>
+    <li>
+        <p align="justify"><span style="color: #333333;"><span
+                style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+                style="font-family: Halant, 'Times New Roman';"><span
+                style="font-size: large;"><span style="color: #434343;"><span
+                style="font-family: Oswald, 'Times New Roman';"><span
+                style="font-size: medium;"><span lang="ru-RU"><strong>В чем заключаются отличия java.util.Comparator от java.lang.Comparable?</strong></span></span></span></span></span></span></span></span></span>
+        </p>
+    </li>
+</ul>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Interface Comparable задает свойство сравнения объекту реализующему его. То есть делает объект сравнимым (по правилам разработчика).</span></span></span></span></span></span></span>
+</p>
+<p align="justify"><span style="color: #333333;"><span
+        style="font-family: Lato, 'Times New Roman';"><span style="font-size: small;"><span
+        style="font-family: Halant, 'Times New Roman';"><span style="font-size: large;"><span
+        style="font-size: medium;"><span lang="ru-RU">Interface Comparator позволяет создавать объекты, которые будут управлять процессом сравнения (например при сортировках).</span></span></span></span></span></span></span>
+</p>

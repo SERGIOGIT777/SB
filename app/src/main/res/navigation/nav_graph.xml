@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.javasb.Fragment.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_FourFragment"
+            app:destination="@id/FourFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_FiveFragment"
+            app:destination="@id/FiveFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SixFragment"
+            app:destination="@id/SixFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SevenFragment"
+            app:destination="@id/SevenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_EightFragment"
+            app:destination="@id/EightFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_NineFragment"
+            app:destination="@id/NineFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_TenFragment"
+            app:destination="@id/TenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ElevenFragment"
+            app:destination="@id/ElevenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_TwelveFragment"
+            app:destination="@id/TwelveFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ThirteenFragment"
+            app:destination="@id/ThirteenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_FourteenFragment"
+            app:destination="@id/FourteenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_FifteenFragment"
+            app:destination="@id/FifteenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SixteenFragment"
+            app:destination="@id/SixteenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SeventeenFragment"
+            app:destination="@id/SeventeenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_EighteenFragment"
+            app:destination="@id/EighteenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_NineteenFragment"
+            app:destination="@id/NineteenFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_TwelvesFragment"
+            app:destination="@id/TwelvesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.javasb.Fragment.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_OopFragment"
+            app:destination="@id/OopFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.example.javasb.Fragment.ThirdFragment"
+        android:label="@string/third_fragment_label"
+        tools:layout="@layout/fragment_third">
+
+        <action
+            android:id="@+id/action_ThirdFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_ThirdFragment_to_JcoreFragment"
+            app:destination="@id/JcoreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OopFragment"
+        android:name="com.example.javasb.FragmentText.OopFragment"
+        android:label="@string/oop_fragment_label"
+        tools:layout="@layout/fragment_oop">
+
+        <action
+            android:id="@+id/action_OopFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JcoreFragment"
+        android:name="com.example.javasb.FragmentText.JcoreFragment"
+        android:label="@string/jcore_fragment_label"
+        tools:layout="@layout/fragment_jcore">
+
+        <action
+            android:id="@+id/action_JcoreFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FourFragment"
+        android:name="com.example.javasb.Fragment.FourFragment"
+        android:label="@string/four_fragment_label"
+        tools:layout="@layout/fragment_four">
+
+
+        <action
+            android:id="@+id/action_FourFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_FourFragment_to_JcfFragment"
+            app:destination="@id/JcfFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JcfFragment"
+        android:name="com.example.javasb.FragmentText.JavacfFragment"
+        android:label="@string/javacf_fragment_label"
+        tools:layout="@layout/fragment_javacf">
+
+        <action
+            android:id="@+id/action_JcfFragment_to_FourFragment"
+            app:destination="@id/FourFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FiveFragment"
+        android:name="com.example.javasb.Fragment.FiveFragment"
+        android:label="@string/five_fragment_label"
+        tools:layout="@layout/fragment_five">
+
+        <action
+            android:id="@+id/action_FiveFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_FiveFragment_to_Java8Fragment"
+            app:destination="@id/Java8Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Java8Fragment"
+        android:name="com.example.javasb.FragmentText.Java8Fragment"
+        android:label="@string/java8_fragment_label"
+        tools:layout="@layout/fragment_java8">
+        <action
+            android:id="@+id/action_Java8Fragment_to_FiveFragment"
+            app:destination="@id/FiveFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SixFragment"
+        android:name="com.example.javasb.Fragment.SixFragment"
+        android:label="@string/inout_fragment_label"
+        tools:layout="@layout/fragment_six">
+
+        <action
+            android:id="@+id/action_SixFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SixFragment_to_InOutFragment"
+            app:destination="@id/InOutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/InOutFragment"
+        android:name="com.example.javasb.FragmentText.InOutFragment"
+        android:label="@string/inout_fragment_label"
+        tools:layout="@layout/fragment_in_out">
+
+        <action
+            android:id="@+id/action_InOutFragment_to_SixFragment"
+            app:destination="@id/SixFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SevenFragment"
+        android:name="com.example.javasb.Fragment.SevenFragment"
+        android:label="@string/seven_fragment_label"
+        tools:layout="@layout/fragment_seven">
+
+        <action
+            android:id="@+id/action_SevenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SevenFragment_to_MreadingFragment"
+            app:destination="@id/MreadingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MreadingFragment"
+        android:name="com.example.javasb.FragmentText.MreadingFragment"
+        android:label="@string/mreading_fragment_label"
+        tools:layout="@layout/fragment_mreading">
+
+        <action
+            android:id="@+id/action_MreadingFragment_to_SevenFragment"
+            app:destination="@id/SevenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EightFragment"
+        android:name="com.example.javasb.Fragment.EightFragment"
+        android:label="@string/eight_fragment_label"
+        tools:layout="@layout/fragment_eight">
+
+        <action
+            android:id="@+id/action_EightFragment_to_SerialFragment"
+            app:destination="@id/SerialFragment" />
+        <action
+            android:id="@+id/action_EightFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SerialFragment"
+        android:name="com.example.javasb.FragmentText.SerialFragment"
+        android:label="@string/serial_fragment_label"
+        tools:layout="@layout/fragment_serial">
+
+        <action
+            android:id="@+id/action_SerialFragment_to_EightFragment"
+            app:destination="@id/EightFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/NineFragment"
+        android:name="com.example.javasb.Fragment.NineFragment"
+        android:label="@string/nine_fragment_label"
+        tools:layout="@layout/fragment_nine">
+
+        <action
+            android:id="@+id/action_NineFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_NineFragment_to_JDBCFragment"
+            app:destination="@id/JDBCFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JDBCFragment"
+        android:name="com.example.javasb.FragmentText.JdbcFragment"
+        android:label="@string/jdbc_fragment_label"
+        tools:layout="@layout/fragment_jdbc">
+
+        <action
+            android:id="@+id/action_JDBCFragment_to_NineFragment"
+            app:destination="@id/NineFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TenFragment"
+        android:name="com.example.javasb.Fragment.TenFragment"
+        android:label="@string/ten_fragment_label"
+        tools:layout="@layout/fragment_ten">
+
+        <action
+            android:id="@+id/action_TenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_TenFragment_to_JSJFragment2"
+            app:destination="@id/JSJFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JSJFragment"
+        android:name="com.example.javasb.FragmentText.JsjFragment"
+        android:label="@string/jsj_fragment_label"
+        tools:layout="@layout/fragment_jsj">
+
+        <action
+            android:id="@+id/action_JSJFragment_to_TenFragment"
+            app:destination="@id/TenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ElevenFragment"
+        android:name="com.example.javasb.Fragment.ElevenFragment"
+        android:label="@string/eleven_fragment_label"
+        tools:layout="@layout/fragment_eleven">
+        <action
+            android:id="@+id/action_ElevenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_ElevenFragment_to_DBFragment2"
+            app:destination="@id/DBFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DBFragment"
+        android:name="com.example.javasb.FragmentText.BdFragment"
+        android:label="@string/bd_fragment_label"
+        tools:layout="@layout/fragment_bd">
+
+        <action
+            android:id="@+id/action_DBFragment_to_ElevenFragment"
+            app:destination="@id/ElevenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TwelveFragment"
+        android:name="com.example.javasb.Fragment.TwelveFragment"
+        android:label="@string/twelve_fragment_label"
+        tools:layout="@layout/fragment_twelve">
+
+        <action
+            android:id="@+id/action_TwelveFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_TwelveFragment_to_SQLFragment"
+            app:destination="@id/SQLFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SQLFragment"
+        android:name="com.example.javasb.FragmentText.SqlFragment"
+        android:label="@string/sql_fragment_label"
+        tools:layout="@layout/fragment_sql">
+
+        <action
+            android:id="@+id/action_SQLFragment_to_TwelveFragment"
+            app:destination="@id/TwelveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ThirteenFragment"
+        android:name="com.example.javasb.Fragment.ThirteenFragment"
+        android:label="@string/thirteen_fragment_label"
+        tools:layout="@layout/fragment_thirteen">
+
+        <action
+            android:id="@+id/action_ThirteenFragment_to_JUnitFragment"
+            app:destination="@id/JUnitFragment" />
+        <action
+            android:id="@+id/action_ThirteenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/JUnitFragment"
+        android:name="com.example.javasb.FragmentText.JunitFragment"
+        android:label="@string/junit_fragment_label"
+        tools:layout="@layout/fragment_junit">
+
+        <action
+            android:id="@+id/action_JUnitFragment_to_ThirteenFragment"
+            app:destination="@id/ThirteenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FourteenFragment"
+        android:name="com.example.javasb.Fragment.FourteenFragment"
+        android:label="@string/fourteen_fragment_label"
+        tools:layout="@layout/fragment_fourteen">
+
+        <action
+            android:id="@+id/action_FourteenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_FourteenFragment_to_Log4JFragment"
+            app:destination="@id/Log4JFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Log4JFragment"
+        android:name="com.example.javasb.FragmentText.Log4jFragment"
+        android:label="@string/log4j_fragment_label"
+        tools:layout="@layout/fragment_log4j">
+
+        <action
+            android:id="@+id/action_Log4JFragment_to_FourteenFragment"
+            app:destination="@id/FourteenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FifteenFragment"
+        android:name="com.example.javasb.Fragment.FifteenFragment"
+        android:label="@string/fifteen_fragment_label"
+        tools:layout="@layout/fragment_fifteen">
+
+        <action
+            android:id="@+id/action_FifteenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_FifteenFragment_to_UmlFragment"
+            app:destination="@id/UmlFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/UmlFragment"
+        android:name="com.example.javasb.FragmentText.UmlFragment"
+        android:label="@string/uml_fragment_label"
+        tools:layout="@layout/fragment_uml">
+
+        <action
+            android:id="@+id/action_UmlFragment_to_FifteenFragment"
+            app:destination="@id/FifteenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SixteenFragment"
+        android:name="com.example.javasb.Fragment.SixteenFragment"
+        android:label="@string/sixteen_fragment_label"
+        tools:layout="@layout/fragment_sixteen">
+
+        <action
+            android:id="@+id/action_SixteenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SixteenFragment_to_XMLFragment"
+            app:destination="@id/XMLFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/XMLFragment"
+        android:name="com.example.javasb.FragmentText.XmlFragment"
+        android:label="@string/xml_fragment_label"
+        tools:layout="@layout/fragment_xml">
+
+        <action
+            android:id="@+id/action_XMLFragment_to_SixteenFragment"
+            app:destination="@id/SixteenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SeventeenFragment"
+        android:name="com.example.javasb.Fragment.SeventeenFragment"
+        android:label="@string/seventeen_fragment_label"
+        tools:layout="@layout/fragment_seventeen">
+
+        <action
+            android:id="@+id/action_SeventeenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SeventeenFragment_to_DesignPatternsFragment"
+            app:destination="@id/DesignPatternsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DesignPatternsFragment"
+        android:name="com.example.javasb.FragmentText.DpFragment"
+        android:label="@string/dp_fragment_label"
+        tools:layout="@layout/fragment_dp">
+
+        <action
+            android:id="@+id/action_DesignPatternsFragment_to_SeventeenFragment"
+            app:destination="@id/SeventeenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EighteenFragment"
+        android:name="com.example.javasb.Fragment.EighteenFragment"
+        android:label="@string/eighteen_fragment_label"
+        tools:layout="@layout/fragment_eighteen">
+
+        <action
+            android:id="@+id/action_EighteenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_EighteenFragment_to_HTMLFragment"
+            app:destination="@id/HTMLFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/HTMLFragment"
+        android:name="com.example.javasb.FragmentText.HtmlFragment"
+        android:label="@string/html_fragment_label"
+        tools:layout="@layout/fragment_html">
+
+        <action
+            android:id="@+id/action_HTMLFragment_to_EighteenFragment"
+            app:destination="@id/EighteenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/NineteenFragment"
+        android:name="com.example.javasb.Fragment.NineteenFragment"
+        android:label="@string/nineteen_fragment_label"
+        tools:layout="@layout/fragment_nineteen">
+
+        <action
+            android:id="@+id/action_NineteenFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_NineteenFragment_to_CSSFragment"
+            app:destination="@id/CSSFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CSSFragment"
+        android:name="com.example.javasb.FragmentText.CssFragment"
+        android:label="@string/css_fragment_label"
+        tools:layout="@layout/fragment_css">
+
+        <action
+            android:id="@+id/action_CSSFragment_to_NineteenFragment"
+            app:destination="@id/NineteenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TwelvesFragment"
+        android:name="com.example.javasb.Fragment.TwelvesFragment"
+        android:label="@string/twelves_fragment_label"
+        tools:layout="@layout/fragment_twelves">
+
+        <action
+            android:id="@+id/action_TwelvesFragment_to_WEBFragment"
+            app:destination="@id/WEBFragment" />
+        <action
+            android:id="@+id/action_TwelvesFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WEBFragment"
+        android:name="com.example.javasb.FragmentText.WebFragment"
+        android:label="@string/web_fragment_label"
+        tools:layout="@layout/fragment_web">
+
+        <action
+            android:id="@+id/action_WEBFragment_to_TwelvesFragment"
+            app:destination="@id/TwelvesFragment" />
+    </fragment>
+
+</navigation>
